@@ -1,6 +1,6 @@
-import com.FutureGadgetParkingLot.FutureGadgetParkingLot.domain.Pricing;
-import com.FutureGadgetParkingLot.FutureGadgetParkingLot.domain.PricingScheme;
-import com.FutureGadgetParkingLot.FutureGadgetParkingLot.domain.Ticket;
+import com.FutureGadgetParkingLot.domain.Pricing;
+import com.FutureGadgetParkingLot.domain.PricingScheme;
+import com.FutureGadgetParkingLot.domain.Ticket;
 import org.junit.Before;
 import org.junit.Test;
 

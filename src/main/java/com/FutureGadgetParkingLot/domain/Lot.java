@@ -1,4 +1,4 @@
-package com.FutureGadgetParkingLot.FutureGadgetParkingLot.domain;
+package com.FutureGadgetParkingLot.domain;
 
 import java.io.Serializable;
 

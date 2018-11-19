@@ -1,10 +1,8 @@
-import com.FutureGadgetParkingLot.FutureGadgetParkingLot.domain.Pricing;
-import org.junit.Assert;
+import com.FutureGadgetParkingLot.domain.Pricing;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

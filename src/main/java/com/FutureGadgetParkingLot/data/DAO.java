@@ -1,4 +1,4 @@
-package com.FutureGadgetParkingLot.FutureGadgetParkingLot.data;
+package com.FutureGadgetParkingLot.data;
 
 import javax.sql.DataSource;
 import javax.xml.crypto.Data;
@@ -9,13 +9,13 @@ public interface DAO<T> {
 
     void setDataSource(DataSource dataSource);
 
-    Optional get();
+    T get(int id);
 
     List<T> getAll();
 
     void insert(T t);
 
-    void update();
+    void update(T t);
 
-    void delete(T t);
+    void delete(int id);
 }

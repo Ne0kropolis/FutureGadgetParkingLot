@@ -1,11 +1,8 @@
-import com.FutureGadgetParkingLot.FutureGadgetParkingLot.domain.Lot;
-import org.junit.Assert;
+import com.FutureGadgetParkingLot.domain.Lot;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
-
-    public class LotTest {
+public class LotTest {
 
         @Before
         public void initialize() {

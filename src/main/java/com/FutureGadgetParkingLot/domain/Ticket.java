@@ -1,12 +1,10 @@
-package com.FutureGadgetParkingLot.FutureGadgetParkingLot.domain;
+package com.FutureGadgetParkingLot.domain;
 
 import java.io.Serializable;
-import java.sql.Date;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Ticket implements Serializable {
+
     private int ticketId;
     private int lotId;
     private String date;
@@ -34,15 +32,33 @@ public class Ticket implements Serializable {
         this.price = 0;
     }
 
+    public int getTicketId() { return ticketId; }
+
+    public int getLotId() {
+        return lotId;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public String getTimeIn() {
+        return timeIn;
+    }
+
+    public String getTimeOut() {
+        return timeOut;
+    }
+
     public double getPrice() {
-        return this.price;
+        return price;
     }
 
     public void calculatePrice(int duration, PricingScheme pricingScheme) {
         List<Pricing> prices = pricingScheme.getPrices();
         for (int i=0; i<prices.size()-1; i++) {
-            if (duration <= prices.get(i+1).getDuration() && duration >= prices.get(i).getDuration()) {
-                this.price = prices.get(i+1).getPrice();
+            if (duration <= prices.get(i + 1).getDuration() && duration >= prices.get(i).getDuration()) {
+                this.price = prices.get(i + 1).getPrice();
             }
         }
     }
