@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a39757a5-b503-4edb-ab52-824e040c1fa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/flyway-init.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/flyway-init.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -75,7 +73,7 @@
           <entry key="dummy" value="10" />
           <entry key="java" value="7039" />
           <entry key="sql" value="1018" />
-          <entry key="txt" value="1009" />
+          <entry key="txt" value="1087" />
           <entry key="xml" value="346" />
           <entry key="yml" value="5" />
         </counts>
@@ -83,7 +81,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="7039" />
-          <entry key="PLAIN_TEXT" value="1019" />
+          <entry key="PLAIN_TEXT" value="1097" />
           <entry key="SQL" value="1018" />
           <entry key="XML" value="346" />
           <entry key="YAML" value="5" />
@@ -483,7 +481,7 @@
     <property name="DatabaseDriversLRU" value="hsqldb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542633507078" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542635098733" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -586,7 +584,7 @@
       <workItem from="1542024826499" duration="6973000" />
       <workItem from="1542091741304" duration="28502000" />
       <workItem from="1542195384210" duration="11971000" />
-      <workItem from="1542607456576" duration="18711000" />
+      <workItem from="1542607456576" duration="19373000" />
     </task>
     <task id="LOCAL-00001" summary="Added pom configuration&#10;Added codestyle plugins">
       <created>1542025563555</created>
@@ -637,7 +635,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542628583841</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fixed flyway migration on init.&#10;Changed Database type to in-memory reference.">
+      <created>1542633552517</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1542633552517</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -652,7 +657,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66482000" />
+    <option name="totallyTimeSpent" value="67144000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -710,7 +715,9 @@
     <MESSAGE value="Adjusted File Structure&#10;Added DAO Interface" />
     <MESSAGE value="Added Domain Classes.&#10;Added Domain Class Tests." />
     <MESSAGE value="Edited web.xml as spring web mvc application.&#10;Replaced appconfig-mvc with dispatcher-servlet.xml file.&#10;Added initial mappings for Ticket Controller and Ticket Service.&#10;Added Jackson imports to pom for JSON returns.&#10;Fixed Datasource and Database configuration.&#10;Added flyway-init for migration on application startup." />
-    <option name="LAST_COMMIT_MESSAGE" value="Edited web.xml as spring web mvc application.&#10;Replaced appconfig-mvc with dispatcher-servlet.xml file.&#10;Added initial mappings for Ticket Controller and Ticket Service.&#10;Added Jackson imports to pom for JSON returns.&#10;Fixed Datasource and Database configuration.&#10;Added flyway-init for migration on application startup." />
+    <MESSAGE value="Fixed flyway migration on init." />
+    <MESSAGE value="Fixed flyway migration on init.&#10;Changed Database type to in-memory reference." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed flyway migration on init.&#10;Changed Database type to in-memory reference." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/codeanalysis/basic_pmd_config.xml">
