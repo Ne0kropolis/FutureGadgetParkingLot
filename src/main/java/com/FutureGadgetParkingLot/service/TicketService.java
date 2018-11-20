@@ -26,4 +26,8 @@ public class TicketService {
         return (this.ticketJdbcDao.get(id));
     }
 
+    public void createTicket(Ticket ticket) {
+        this.ticketJdbcDao.insert(ticket);
+    }
+
 }

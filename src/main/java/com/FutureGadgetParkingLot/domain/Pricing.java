@@ -5,7 +5,7 @@ import java.util.Comparator;
 
 public class Pricing implements Serializable {
     private int pricingId;
-    private int PricingSchemeNumber;
+    private int pricingSchemeNumber;
     private int duration;
     private String granularity;
     private double price;
@@ -14,7 +14,7 @@ public class Pricing implements Serializable {
 
     public Pricing(int pricingId, int pricingSchemeNumber, int duration, String granularity, double price) {
         this.pricingId = pricingId;
-        PricingSchemeNumber = pricingSchemeNumber;
+        pricingSchemeNumber = pricingSchemeNumber;
         this.duration = duration;
         this.granularity = granularity;
         this.price = price;
@@ -25,7 +25,7 @@ public class Pricing implements Serializable {
     }
 
     public int getPricingSchemeNumber() {
-        return PricingSchemeNumber;
+        return pricingSchemeNumber;
     }
 
     public String getGranularity() {

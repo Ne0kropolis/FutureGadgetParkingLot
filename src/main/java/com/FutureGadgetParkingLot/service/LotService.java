@@ -25,4 +25,6 @@ public class LotService {
     public Lot getLotById(int id) {
         return this.lotJdbcDao.get(id);
     }
+
+    public void createLot(Lot lot) {this.lotJdbcDao.insert(lot);}
 }

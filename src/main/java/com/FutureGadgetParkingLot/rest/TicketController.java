@@ -3,13 +3,12 @@ package com.FutureGadgetParkingLot.rest;
 import com.FutureGadgetParkingLot.domain.Ticket;
 import com.FutureGadgetParkingLot.service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import java.util.List;
 
+@Controller
 @Path("/tickets")
 public class TicketController {
 
@@ -35,5 +34,12 @@ public class TicketController {
     @Produces("application/json")
     public Ticket getTicketById(@PathParam("id") int id) {
         return this.ticketService.getTicketById(id);
+    }
+
+    @Path("/create/json")
+    @POST
+    @Consumes("application/json")
+    public void createTicket(Ticket ticket) {
+        this.ticketService.createTicket(ticket);
     }
 }

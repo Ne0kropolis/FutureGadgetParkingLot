@@ -18,10 +18,14 @@ public class PricingService {
     }
 
     public List getAllPricings() {
-        return (pricingJdbcDao.getAll());
+        return (this.pricingJdbcDao.getAll());
     }
 
     public Pricing getPricingById(int id) {
-        return (pricingJdbcDao.get(id));
+        return (this.pricingJdbcDao.get(id));
+    }
+
+    public void createPricing(Pricing pricing) {
+        this.pricingJdbcDao.insert(pricing);
     }
 }

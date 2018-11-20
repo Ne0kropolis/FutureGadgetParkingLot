@@ -38,8 +38,8 @@ public class Ticket_JDBC_DAO implements DAO<Ticket> {
 
     @Override
     public void insert(Ticket ticket) {
-        String query = "INSERT INTO TICKET VALUES(?,?,?,?,?,?)";
-        jdbcTemplate.update(query, ticket.getTicketId(), ticket.getLotId(), ticket.getDate(), ticket.getTimeIn(), ticket.getTimeOut(), ticket.getPrice());
+        String query = "INSERT INTO TICKET VALUES(?,?,?,?,?,?,?)";
+        jdbcTemplate.update(query, ticket.getTicketId(), ticket.getLotId(), ticket.getDate(), ticket.getTimeIn(), ticket.getTimeOut(), ticket.getPrice(), ticket.getLost());
     }
 
     @Override

@@ -5,10 +5,7 @@ import com.FutureGadgetParkingLot.service.LotService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import java.util.List;
 
 @Controller
@@ -33,5 +30,12 @@ public class LotController {
     @Produces("application/json")
     public Lot getLotById(@PathParam("id") int id) {
         return lotService.getLotById(id);
+    }
+
+    @Path("/create/json")
+    @POST
+    @Produces("application/json")
+    public void createLot(Lot lot) {
+        this.lotService.createLot(lot);
     }
 }

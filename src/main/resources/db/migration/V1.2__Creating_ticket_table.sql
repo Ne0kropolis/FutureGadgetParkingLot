@@ -1,6 +1,6 @@
 CREATE TABLE TICKET (
   Ticket_ID INT NOT NULL,
-  Lot_ID INT NOT NULL UNIQUE,
+  Lot_ID INT NOT NULL,
   Ticket_Date Date NOT NULL,
   Ticket_Time_In Time NOT NULL,
   Ticket_Time_Out Time,

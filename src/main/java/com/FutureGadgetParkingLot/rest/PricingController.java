@@ -5,10 +5,7 @@ import com.FutureGadgetParkingLot.service.PricingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import java.util.List;
 
 @Controller
@@ -34,5 +31,12 @@ public class PricingController {
     @Produces("application/json")
     public Pricing getPricingById(@PathParam("id") int id) {
         return this.pricingService.getPricingById(id);
+    }
+
+    @Path("/create/json")
+    @POST
+    @Consumes("application/json")
+    public void createPricing(Pricing pricing) {
+        this.pricingService.createPricing(pricing);
     }
 }
