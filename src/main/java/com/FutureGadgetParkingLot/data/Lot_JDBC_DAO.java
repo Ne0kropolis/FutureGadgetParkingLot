@@ -72,7 +72,7 @@ public class Lot_JDBC_DAO implements DAO<Lot> {
         public Lot mapRow(ResultSet rs, int rowNum) throws SQLException {
             return new Lot(
                     rs.getInt("Lot_Id"),
-                    rs.getInt("PricingSchemeNumber"),
+                    rs.getInt("Pricing_Scheme_Number"),
                     rs.getString("Lot_Name"),
                     rs.getString("Lot_Address"),
                     rs.getInt("Lot_Capacity"));
