@@ -12,7 +12,7 @@ import javax.ws.rs.Produces;
 import java.util.List;
 
 @RestController
-@RequestMapping("tickets/get")
+@RequestMapping("tickets")
 public class TicketController {
 
     private final TicketService ticketService;
@@ -22,15 +22,15 @@ public class TicketController {
         this.ticketService = ticketService;
     }
 
-    @GetMapping("/all")
+    @GetMapping("/get/all")
     @Produces("application/json")
     public List getAllTickets() {
         return this.ticketService.getAllTickets();
     }
 
-    @GetMapping("/one/{id}")
+    @GetMapping("/get/{id}")
     @Produces("application/json")
-    public Ticket getOneTicket(@PathVariable int id) {
-        return this.ticketService.getSingleTicket(id);
+    public Ticket getTicketById(@PathVariable int id) {
+        return this.ticketService.getTicketById(id);
     }
 }

@@ -22,7 +22,7 @@ public class TicketService {
         return (this.ticketJdbcDao.getAll());
     }
 
-    public Ticket getSingleTicket(int id) {
+    public Ticket getTicketById(int id) {
         return (this.ticketJdbcDao.get(id));
     }
 

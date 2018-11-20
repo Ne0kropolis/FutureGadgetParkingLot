@@ -27,7 +27,7 @@ public class LotController {
         return lotService.getAllLots();
     }
 
-    @GetMapping("get/{id}")
+    @GetMapping("/get/{id}")
     @Produces("application/json")
     public Lot getLotById(@PathVariable int id) {
         return lotService.getLotById(id);
