@@ -60,7 +60,8 @@ public class Ticket_JDBC_DAO implements DAO<Ticket> {
                     rs.getString("Ticket_date"),
                     rs.getString("Ticket_time_in"),
                     rs.getString("Ticket_time_out"),
-                    rs.getDouble("Ticket_Price"));
+                    rs.getDouble("Ticket_Price"),
+                    rs.getBoolean("Ticket_Lost"));
         }
     }
 
