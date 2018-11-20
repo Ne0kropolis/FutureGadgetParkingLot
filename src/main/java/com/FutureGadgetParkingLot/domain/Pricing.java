@@ -20,6 +20,22 @@ public class Pricing implements Serializable {
         this.price = price;
     }
 
+    public int getPricingId() {
+        return pricingId;
+    }
+
+    public int getPricingSchemeNumber() {
+        return PricingSchemeNumber;
+    }
+
+    public String getGranularity() {
+        return granularity;
+    }
+
+    public static Comparator<Pricing> getSortByDuration() {
+        return sortByDuration;
+    }
+
     public int getDuration() {
         return this.duration;
     }

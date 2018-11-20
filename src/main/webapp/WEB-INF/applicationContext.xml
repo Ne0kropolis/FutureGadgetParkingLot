@@ -13,9 +13,6 @@
 
     <context:annotation-config/>
 
-    <bean id="ticketController" class="com.FutureGadgetParkingLot.rest.TicketController">
-    </bean>
-
     <bean id = "dataSource"
           class = "org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name = "driverClassName" value = "org.hsqldb.jdbc.JDBCDriver"/>
