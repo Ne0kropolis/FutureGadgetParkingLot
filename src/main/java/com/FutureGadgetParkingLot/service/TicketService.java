@@ -23,7 +23,6 @@ public class TicketService {
     }
 
     public Ticket getSingleTicket(int id) {
-        Ticket ticket = new Ticket(1, 100, "2018-11-09", "10:15", "11:20", 30, false);
         return (this.ticketJdbcDao.get(id));
     }
 
