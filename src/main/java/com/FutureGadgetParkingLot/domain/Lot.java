@@ -18,4 +18,24 @@ public class Lot implements Serializable {
         this.lotAddress = lotAddress;
         this.lotCapactiy = lotCapactiy;
     }
+
+    public int getLotId() {
+        return lotId;
+    }
+
+    public int getPricingSchemeNumber() {
+        return pricingSchemeNumber;
+    }
+
+    public String getLotName() {
+        return lotName;
+    }
+
+    public String getLotAddress() {
+        return lotAddress;
+    }
+
+    public int getLotCapactiy() {
+        return lotCapactiy;
+    }
 }

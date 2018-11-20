@@ -27,8 +27,4 @@ public class TicketService {
         return (this.ticketJdbcDao.get(id));
     }
 
-
-    public String getHello() {
-        return "Hello";
-    }
 }
