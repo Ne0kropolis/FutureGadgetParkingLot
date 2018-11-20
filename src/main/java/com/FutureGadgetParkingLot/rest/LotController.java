@@ -22,15 +22,19 @@ public class LotController {
     @GET
     @Produces("application/json")
     public List getAllLots() {
-        return lotService.getAllLots();
+        return this.lotService.getAllLots();
     }
 
     @Path("/get/{id}")
     @GET
     @Produces("application/json")
     public Lot getLotById(@PathParam("id") int id) {
-        return lotService.getLotById(id);
+        return this.lotService.getLotById(id);
     }
+
+    @Path("/delete/{id}")
+    @GET
+    public void deleteLot(@PathParam("id") int id) { this.lotService.deleteLot(id);}
 
     @Path("/create/json")
     @POST

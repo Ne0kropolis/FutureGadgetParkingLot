@@ -30,4 +30,6 @@ public class PricingService {
     }
 
     public void updatePricing(Pricing pricing) { this.pricingJdbcDao.update(pricing);}
+
+    public void deletePricing(int id) { this.pricingJdbcDao.delete(id);}
 }

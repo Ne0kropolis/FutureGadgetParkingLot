@@ -36,6 +36,10 @@ public class TicketController {
         return this.ticketService.getTicketById(id);
     }
 
+    @Path("/delete/{id}")
+    @GET
+    public void deleteTicket(@PathParam("id") int id) {this.ticketService.deleteTicket(id);}
+
     @Path("/create/json")
     @POST
     @Consumes("application/json")
@@ -47,4 +51,5 @@ public class TicketController {
     @POST
     @Consumes
     public void updateTicket(Ticket ticket) { this.ticketService.updateTicket(ticket);}
+
 }

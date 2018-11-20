@@ -33,6 +33,10 @@ public class PricingController {
         return this.pricingService.getPricingById(id);
     }
 
+    @Path("/delete/{id}")
+    @GET
+    public void deletePricing(@PathParam("id") int id) {this.pricingService.deletePricing(id);}
+
     @Path("/create/json")
     @POST
     @Consumes("application/json")
@@ -46,4 +50,5 @@ public class PricingController {
     public void updatePricing(Pricing pricing) {
         this.pricingService.updatePricing(pricing);
     }
+
 }

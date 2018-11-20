@@ -58,7 +58,8 @@ public class Ticket_JDBC_DAO implements DAO<Ticket> {
 
     @Override
     public void delete(int id) {
-        String query = "DELETE FROM TICKET WHERE Ticket_Id =" + id + ";";
+        String query = "DELETE FROM TICKET WHERE Ticket_ID = ?;";
+        this.jdbcTemplate.update(query, id);
     }
 
     public class TicketMapper implements RowMapper<Ticket> {
