@@ -39,4 +39,11 @@ public class PricingController {
     public void createPricing(Pricing pricing) {
         this.pricingService.createPricing(pricing);
     }
+
+    @Path("/update/json")
+    @POST
+    @Consumes("application/json")
+    public void updatePricing(Pricing pricing) {
+        this.pricingService.updatePricing(pricing);
+    }
 }

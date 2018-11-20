@@ -42,4 +42,9 @@ public class TicketController {
     public void createTicket(Ticket ticket) {
         this.ticketService.createTicket(ticket);
     }
+
+    @Path("/update/json")
+    @POST
+    @Consumes
+    public void updateTicket(Ticket ticket) { this.ticketService.updateTicket(ticket);}
 }

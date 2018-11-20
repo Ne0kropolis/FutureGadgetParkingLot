@@ -44,8 +44,16 @@ public class Ticket_JDBC_DAO implements DAO<Ticket> {
 
     @Override
     public void update(Ticket ticket) {
-        String query = "UPDATE TICKET SET price=? Where Ticket_Id = ?";
-        jdbcTemplate.update(query,ticket.getPrice(), ticket.getTicketId());
+        String query = "UPDATE TICKET SET Lot_Id=?, Ticket_Date=?, Ticket_Time_In=?, Ticket_Time_Out=?, Ticket_Price=?, Ticket_Lost=? Where Ticket_Id = ?";
+        jdbcTemplate.update(query,
+                ticket.getLotId(),
+                ticket.getDate(),
+                ticket.getTimeIn(),
+                ticket.getTimeOut(),
+                ticket.getPrice(),
+                ticket.getLost(),
+                ticket.getTicketId()
+        );
     }
 
     @Override

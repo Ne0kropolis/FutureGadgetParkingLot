@@ -30,4 +30,6 @@ public class TicketService {
         this.ticketJdbcDao.insert(ticket);
     }
 
+    public void updateTicket(Ticket ticket) { this.ticketJdbcDao.update(ticket); }
+
 }

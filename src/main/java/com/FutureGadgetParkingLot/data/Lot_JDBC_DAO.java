@@ -50,10 +50,9 @@ public class Lot_JDBC_DAO implements DAO<Lot> {
 
     @Override
     public void update(Lot lot) {
-        String query = "UPDATE LOT SET Lot_Id=?, Pricing_Scheme_Number=?, Lot_Name=?, Lot_Address=?, Lot_Capacity=? WHERE Lot_Id=?";
+        String query = "UPDATE LOT SET Pricing_Scheme_Number=?, Lot_Name=?, Lot_Address=?, Lot_Capacity=? WHERE Lot_Id=?";
         jdbct.update(
                 query,
-                lot.getLotId(),
                 lot.getPricingSchemeNumber(),
                 lot.getLotName(),
                 lot.getLotAddress(),

@@ -28,4 +28,6 @@ public class PricingService {
     public void createPricing(Pricing pricing) {
         this.pricingJdbcDao.insert(pricing);
     }
+
+    public void updatePricing(Pricing pricing) { this.pricingJdbcDao.update(pricing);}
 }

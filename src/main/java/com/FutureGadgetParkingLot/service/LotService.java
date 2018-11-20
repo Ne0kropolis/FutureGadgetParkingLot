@@ -27,4 +27,6 @@ public class LotService {
     }
 
     public void createLot(Lot lot) {this.lotJdbcDao.insert(lot);}
+
+    public void updateLot(Lot lot) {this.lotJdbcDao.update(lot);}
 }

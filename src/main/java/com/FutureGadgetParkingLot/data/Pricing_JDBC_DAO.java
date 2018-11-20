@@ -51,10 +51,9 @@ public class Pricing_JDBC_DAO implements DAO<Pricing> {
 
     @Override
     public void update(Pricing pricing) {
-        String query = "UPDATE PRICING SET Pricing_ID=?, Pricing_Scheme_Number=?, Pricing_Duration=?, Pricing_Granularity=?, Pricing_Price=? WHERE Lot_Id=?";
+        String query = "UPDATE PRICING SET Pricing_Scheme_Number=?, Pricing_Duration=?, Pricing_Granularity=?, Pricing_Price=? WHERE Pricing_ID=?";
         jdbcTemplate.update(
                 query,
-                pricing.getPricingId(),
                 pricing.getPricingSchemeNumber(),
                 pricing.getDuration(),
                 pricing.getGranularity(),

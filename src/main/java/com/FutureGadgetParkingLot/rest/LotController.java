@@ -38,4 +38,11 @@ public class LotController {
     public void createLot(Lot lot) {
         this.lotService.createLot(lot);
     }
+
+    @Path("/update/json")
+    @POST
+    @Consumes("application/json")
+    public void updateLot(Lot lot) {
+        this.lotService.updateLot(lot);
+    }
 }
