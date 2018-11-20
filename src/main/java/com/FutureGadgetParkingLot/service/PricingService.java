@@ -29,6 +29,8 @@ public class PricingService {
         this.pricingJdbcDao.insert(pricing);
     }
 
+    public void createPricings(List<Pricing> pricingList) {this.pricingJdbcDao.batchInsert(pricingList);}
+
     public void updatePricing(Pricing pricing) { this.pricingJdbcDao.update(pricing);}
 
     public void deletePricing(int id) { this.pricingJdbcDao.delete(id);}

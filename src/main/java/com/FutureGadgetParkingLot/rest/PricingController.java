@@ -44,6 +44,13 @@ public class PricingController {
         this.pricingService.createPricing(pricing);
     }
 
+    @Path("/create/list/json")
+    @POST
+    @Consumes("application/json")
+    public void createPricings(List<Pricing> pricingList) {
+        this.pricingService.createPricings(pricingList);
+    }
+
     @Path("/update/json")
     @POST
     @Consumes("application/json")

@@ -3,11 +3,13 @@ package com.FutureGadgetParkingLot.data;
 import com.FutureGadgetParkingLot.domain.Lot;
 import com.FutureGadgetParkingLot.domain.Pricing;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
@@ -47,6 +49,26 @@ public class Pricing_JDBC_DAO implements DAO<Pricing> {
                 pricing.getGranularity(),
                 pricing.getPrice()
         );
+    }
+
+    @Override
+    public void batchInsert(List<Pricing> pricingList) {
+        String query = "INSERT INTO PRICING VALUES(?,?,?,?,?);";
+        this.jdbcTemplate.batchUpdate(query, new BatchPreparedStatementSetter() {
+            @Override
+            public void setValues(PreparedStatement preparedStatement, int i) throws SQLException {
+                preparedStatement.setInt(1, pricingList.get(i).getPricingId());
+                preparedStatement.setInt(2, pricingList.get(i).getPricingSchemeNumber());
+                preparedStatement.setInt(3, pricingList.get(i).getDuration());
+                preparedStatement.setString(4, pricingList.get(i).getGranularity());
+                preparedStatement.setDouble(5, pricingList.get(i).getPrice());
+            }
+
+            @Override
+            public int getBatchSize() {
+                return pricingList.size();
+            }
+        });
     }
 
     @Override

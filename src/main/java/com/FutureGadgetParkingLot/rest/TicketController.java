@@ -47,6 +47,11 @@ public class TicketController {
         this.ticketService.createTicket(ticket);
     }
 
+    @Path("/create/list/json")
+    @POST
+    @Consumes("application/json")
+    public void createTickets(List<Ticket> ticketList) { this.ticketService.createTickets(ticketList);}
+
     @Path("/update/json")
     @POST
     @Consumes

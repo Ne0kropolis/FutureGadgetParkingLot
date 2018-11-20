@@ -2,12 +2,14 @@ package com.FutureGadgetParkingLot.data;
 
 import com.FutureGadgetParkingLot.domain.Ticket;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
@@ -40,6 +42,28 @@ public class Ticket_JDBC_DAO implements DAO<Ticket> {
     public void insert(Ticket ticket) {
         String query = "INSERT INTO TICKET VALUES(?,?,?,?,?,?,?)";
         jdbcTemplate.update(query, ticket.getTicketId(), ticket.getLotId(), ticket.getDate(), ticket.getTimeIn(), ticket.getTimeOut(), ticket.getPrice(), ticket.getLost());
+    }
+
+    @Override
+    public void batchInsert(List<Ticket> ticketList) {
+        String query = "INSERT INTO TICKET VALUES(?,?,?,?,?,?,?);";
+        this.jdbcTemplate.batchUpdate(query, new BatchPreparedStatementSetter() {
+            @Override
+            public void setValues(PreparedStatement preparedStatement, int i) throws SQLException {
+                preparedStatement.setInt(1, ticketList.get(i).getTicketId());
+                preparedStatement.setInt(2, ticketList.get(i).getLotId());
+                preparedStatement.setString(3, ticketList.get(i).getDate());
+                preparedStatement.setString(4, ticketList.get(i).getTimeIn());
+                preparedStatement.setString(4, ticketList.get(i).getTimeOut());
+                preparedStatement.setDouble(5, ticketList.get(i).getPrice());
+                preparedStatement.setBoolean(6, ticketList.get(i).getLost());
+            }
+
+            @Override
+            public int getBatchSize() {
+                return ticketList.size();
+            }
+        });
     }
 
     @Override

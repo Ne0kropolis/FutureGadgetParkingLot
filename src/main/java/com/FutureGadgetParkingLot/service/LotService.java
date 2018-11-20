@@ -28,6 +28,8 @@ public class LotService {
 
     public void createLot(Lot lot) {this.lotJdbcDao.insert(lot);}
 
+    public void createLots(List<Lot> lotList) {this.lotJdbcDao.batchInsert(lotList);}
+
     public void updateLot(Lot lot) {this.lotJdbcDao.update(lot);}
 
     public void deleteLot(int id) {this.lotJdbcDao.delete(id);}

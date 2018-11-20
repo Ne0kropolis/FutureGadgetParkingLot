@@ -30,6 +30,8 @@ public class TicketService {
         this.ticketJdbcDao.insert(ticket);
     }
 
+    public void createTickets(List<Ticket> ticketList) {this.ticketJdbcDao.batchInsert(ticketList);}
+
     public void updateTicket(Ticket ticket) { this.ticketJdbcDao.update(ticket); }
 
     public void deleteTicket(int id) {this.ticketJdbcDao.delete(id);}
