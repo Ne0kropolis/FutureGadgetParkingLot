@@ -18,8 +18,8 @@ public class TicketTest {
     @Before
     public void initialize() {
         blankTicket = new Ticket();
-        ticketWithPrice = new Ticket(1, 100, "2018-11-09", "10:15", "11:20", 30);
-        ticketWithoutPrice = new Ticket(1, 100, "2018-11-09", "10:15", "11:20");
+        ticketWithPrice = new Ticket(1, 100, "2018-11-09", "10:15", "11:20", 30, false);
+        ticketWithoutPrice = new Ticket(1, 100, "2018-11-09", "10:15", "11:20", false);
     }
 
     @Test
