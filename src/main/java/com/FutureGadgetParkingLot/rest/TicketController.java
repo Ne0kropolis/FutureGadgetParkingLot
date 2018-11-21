@@ -19,8 +19,6 @@ public class TicketController {
         this.ticketService = ticketService;
     }
 
-
-
     @Path("/get/all")
     @GET
     @Produces("application/json")
@@ -45,6 +43,13 @@ public class TicketController {
     @Consumes("application/json")
     public void createTicket(Ticket ticket) {
         this.ticketService.createTicket(ticket);
+    }
+
+    @Path("/create/blank/json")
+    @POST
+    @Consumes("application/json")
+    public void createTicketWithoutPrice(Ticket ticket) {
+        
     }
 
     @Path("/create/list/json")

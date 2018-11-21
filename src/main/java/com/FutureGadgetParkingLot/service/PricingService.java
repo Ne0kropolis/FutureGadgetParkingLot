@@ -2,6 +2,7 @@ package com.FutureGadgetParkingLot.service;
 
 import com.FutureGadgetParkingLot.data.Pricing_JDBC_DAO;
 import com.FutureGadgetParkingLot.domain.Pricing;
+import com.FutureGadgetParkingLot.domain.PricingScheme;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;

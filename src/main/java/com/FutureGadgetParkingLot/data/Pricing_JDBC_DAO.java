@@ -2,6 +2,7 @@ package com.FutureGadgetParkingLot.data;
 
 import com.FutureGadgetParkingLot.domain.Lot;
 import com.FutureGadgetParkingLot.domain.Pricing;
+import com.FutureGadgetParkingLot.domain.PricingScheme;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -30,6 +31,12 @@ public class Pricing_JDBC_DAO implements DAO<Pricing> {
     public Pricing get(int id) {
         String query = "SELECT * FROM PRICING WHERE Pricing_Id = " + id + ";";
         return (jdbcTemplate.queryForObject(query, new PricingMapper()));
+    }
+
+    public PricingScheme getPricingScheme(int pricingSchemeNumber) {
+        String query = "SELECT * FROM PRICING WHERE Pricing_Scheme_Number =" + pricingSchemeNumber;
+        List<Pricing> pricingList = jdbcTemplate.query(query, new PricingMapper());
+        return new PricingScheme(pricingList);
     }
 
     @Override

@@ -59,12 +59,7 @@ public class Ticket implements Serializable {
 
     public boolean getLost() { return lost; }
 
-    public void calculatePrice(int duration, PricingScheme pricingScheme) {
-        List<Pricing> prices = pricingScheme.getPrices();
-        for (int i=0; i<prices.size()-1; i++) {
-            if (duration <= prices.get(i + 1).getDuration() && duration >= prices.get(i).getDuration()) {
-                this.price = prices.get(i + 1).getPrice();
-            }
-        }
+    public void calculatePrice(long duration, PricingScheme pricingScheme) {
+
     }
 }

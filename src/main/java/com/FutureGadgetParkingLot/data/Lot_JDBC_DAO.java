@@ -38,6 +38,11 @@ public class Lot_JDBC_DAO implements DAO<Lot> {
         return (jdbct.query(query, new LotMapper()));
     }
 
+    public Integer getPricingSchemeNumber(int id) {
+        String query = "SELECT Pricing_Scheme_Number FROM LOT WHERE Lot_ID= " + id;
+        return this.jdbct.queryForObject(query, new LotMapper()).getPricingSchemeNumber();
+    }
+
     @Override
     public void insert(Lot lot) {
         String query = "INSERT INTO LOT VALUES (?,?,?,?,?)";
