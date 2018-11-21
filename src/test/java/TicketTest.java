@@ -37,16 +37,4 @@ public class TicketTest {
         assertEquals(30, ticketWithPrice.getPrice());
     }
 
-    @Test
-    public void shouldCalculateCorrectPrice() {
-        List<Pricing> prices = new ArrayList<>();
-        prices.add(new Pricing(1, 1, 10, "M", 10));
-        prices.add(new Pricing(2 , 1, 40, "M", 30));
-        PricingScheme pricingScheme = new PricingScheme(prices);
-        int duration = 31;
-
-        ticketWithoutPrice.calculatePrice(duration, pricingScheme);
-
-        assertEquals(30, ticketWithoutPrice.getPrice());
-    }
 }

@@ -59,7 +59,4 @@ public class Ticket implements Serializable {
 
     public boolean getLost() { return lost; }
 
-    public void calculatePrice(long duration, PricingScheme pricingScheme) {
-
-    }
 }
