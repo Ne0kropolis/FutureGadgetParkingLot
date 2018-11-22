@@ -32,6 +32,15 @@ public class Ticket implements Serializable {
         this.lost = lost;
     }
 
+    public Ticket(int ticketId, int lotId, Timestamp timeIn, boolean lost) {
+        this.ticketId = ticketId;
+        this.lotId = lotId;
+        this.timeIn = timeIn;
+        this.timeOut = null;
+        this.price = 0;
+        this.lost = lost;
+    }
+
     public int getTicketId() { return ticketId; }
 
     public int getLotId() {
@@ -54,4 +63,5 @@ public class Ticket implements Serializable {
 
     public void setPrice(double price) {this.price=price;}
 
+    public void setLost(boolean lost) { this.lost = lost;}
 }

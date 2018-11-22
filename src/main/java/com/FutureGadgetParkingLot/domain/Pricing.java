@@ -14,7 +14,7 @@ public class Pricing implements Serializable {
 
     public Pricing(int pricingId, int pricingSchemeNumber, int duration, String granularity, double price) {
         this.pricingId = pricingId;
-        pricingSchemeNumber = pricingSchemeNumber;
+        this.pricingSchemeNumber = pricingSchemeNumber;
         this.duration = duration;
         this.granularity = granularity;
         this.price = price;
@@ -32,10 +32,6 @@ public class Pricing implements Serializable {
         return granularity;
     }
 
-    public static Comparator<Pricing> getSortByDuration() {
-        return sortByDuration;
-    }
-
     public int getDuration() {
         return this.duration;
     }
@@ -44,5 +40,9 @@ public class Pricing implements Serializable {
         return this.price;
     }
 
+    public void setDuration(int duration) { this.duration = duration;}
+
     public static Comparator<Pricing> sortByDuration = (o1, o2) -> (Integer.compare(o1.duration, o2.duration));
+
+
 }

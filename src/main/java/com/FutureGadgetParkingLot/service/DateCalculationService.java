@@ -13,14 +13,24 @@ import java.time.format.DateTimeFormatter;
 @Service
 public class DateCalculationService {
     public long calculateDuration(Ticket ticket) {
-        LocalDateTime timeIn = localDateFromTimestamp(ticket.getTimeIn());
-        LocalDateTime timeOut = localDateFromTimestamp(ticket.getTimeOut());
-        Duration duration = Duration.between(timeIn, timeOut);
+        checkTimeOut(ticket);
+        if (!ticket.getLost()){
+            LocalDateTime timeIn = localDateFromTimestamp(ticket.getTimeIn());
+            LocalDateTime timeOut = localDateFromTimestamp(ticket.getTimeOut());
+            Duration duration = Duration.between(timeIn, timeOut);
+            return (duration.toMinutes());
+        }
+        else return 0;
 
-        return (duration.toMinutes());
     }
 
     public static LocalDateTime localDateFromTimestamp(Timestamp timestamp) {
         return LocalDateTime.ofInstant(timestamp.toInstant(), ZoneOffset.ofHours(0));
+    }
+
+    public void checkTimeOut(Ticket ticket) {
+        if (ticket.getTimeOut() == null) {
+            ticket.setLost(true);
+        }
     }
 }

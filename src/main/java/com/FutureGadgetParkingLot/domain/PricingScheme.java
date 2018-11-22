@@ -1,7 +1,7 @@
 package com.FutureGadgetParkingLot.domain;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class PricingScheme {
@@ -20,9 +20,7 @@ public class PricingScheme {
 
     public List<Pricing> getPrices() {return prices;}
 
-    public List<Long> getDurations() {
-        List<Long> durations = new ArrayList<Long>();
-        durations.add((long) 0);
+    public List<Pricing> getDurations() {
 
         for (int i=0; i<prices.size(); i++) {
             switch (prices.get(i).getGranularity().toUpperCase()) {
@@ -30,23 +28,26 @@ public class PricingScheme {
                     this.setLostTicketPrice(prices.get(i).getPrice());
                     break;
                 case"S":
-                    durations.add((long) prices.get(i).getPrice()/60);
+                    prices.get(i).setDuration(prices.get(i).getDuration()/60);
                     break;
                 case"M":
-                    durations.add((long) prices.get(i).getPrice());
+                    prices.get(i).setDuration(prices.get(i).getDuration());
                     break;
                 case"H":
-                    durations.add((long) prices.get(i).getPrice()*60);
+                    prices.get(i).setDuration(prices.get(i).getDuration()*60);
                     break;
                 case"D":
-                    durations.add((long) prices.get(i).getPrice()*60*24);
+                    prices.get(i).setDuration(prices.get(i).getDuration()*60*24);
                     break;
             }
         }
-        return durations;
+        prices.sort(Pricing.sortByDuration);
+        return  prices;
     }
 
     public void setLostTicketPrice(double lostTicketPrice) {
         this.lostTicketPrice = lostTicketPrice;
     }
+
+    public static Comparator<Long> sortByDuration = (o1, o2) -> (Long.compare(o1, o2));
 }

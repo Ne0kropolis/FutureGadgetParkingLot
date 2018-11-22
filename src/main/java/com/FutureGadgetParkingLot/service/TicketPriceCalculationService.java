@@ -35,17 +35,16 @@ public class TicketPriceCalculationService {
     public double calculateTicketPrice(long duration, int lotId, boolean lost) {
         double price = 0;
         PricingScheme pricingScheme = this.checkPricingScheme(lotId);
-        List<Pricing> prices = pricingScheme.getPrices();
-        List<Long> durations = pricingScheme.getDurations();
-
-        System.out.println(duration);
+        List<Pricing> durations = pricingScheme.getDurations();
 
         if (!lost){
             for (int i=0; i<durations.size()-1; i++) {
-                if (duration <= durations.get(i + 1) && duration >= durations.get(i)) {
-                    price = prices.get(i+1).getPrice();
-                    System.out.println(price = prices.get(i).getPrice());
+                if (duration <= durations.get(i + 1).getDuration() && duration >= durations.get(i).getDuration()) {
+                    price = durations.get(i+1).getPrice();
                 }
+            }
+            if (price == 0) {
+                price = pricingScheme.getLostTicketPrice();
             }
         } else {
             return pricingScheme.getLostTicketPrice();

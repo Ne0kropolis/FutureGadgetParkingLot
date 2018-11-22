@@ -49,7 +49,6 @@ public class TicketController {
     @POST
     @Consumes("application/json")
     public void createTicketWithoutPrice(Ticket ticket) {
-        
     }
 
     @Path("/create/list/json")
