@@ -19,28 +19,28 @@ public class PricingController {
         this.pricingService = pricingService;
     }
 
-    @Path("/get/all")
+    @Path("/all")
     @GET
     @Produces("application/json")
     public List getAllPricings() {
         return this.pricingService.getAllPricings();
     }
 
-    @Path("/get/{id}")
+    @Path("/{id}")
     @GET
     @Produces("application/json")
     public Pricing getPricingById(@PathParam("id") int id) {
         return this.pricingService.getPricingById(id);
     }
 
-    @Path("/delete/{id}")
-    @GET
-    public void deletePricing(@PathParam("id") int id) {this.pricingService.deletePricing(id);}
-
     @Path("/scheme/{id}")
     @GET
     @Produces("application/json")
     public List<Pricing> getPricingBySchemeId(@PathParam("id") int id) {return this.pricingService.getPricingBySchemeNumber(id);}
+
+    @Path("/delete/{id}")
+    @POST
+    public void deletePricing(@PathParam("id") int id) {this.pricingService.deletePricing(id);}
 
     @Path("/create/json")
     @POST

@@ -18,14 +18,14 @@ public class LotController {
     @Autowired
     public LotController(LotService lotService) {this.lotService = lotService;}
 
-    @Path("/get/all")
+    @Path("/all")
     @GET
     @Produces("application/json")
     public List getAllLots() {
         return this.lotService.getAllLots();
     }
 
-    @Path("/get/{id}")
+    @Path("/{id}")
     @GET
     @Produces("application/json")
     public Lot getLotById(@PathParam("id") int id) {
@@ -33,7 +33,7 @@ public class LotController {
     }
 
     @Path("/delete/{id}")
-    @GET
+    @POST
     public void deleteLot(@PathParam("id") int id) { this.lotService.deleteLot(id);}
 
     @Path("/create/json")

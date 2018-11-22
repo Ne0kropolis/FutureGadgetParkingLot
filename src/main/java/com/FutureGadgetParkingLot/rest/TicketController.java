@@ -19,15 +19,14 @@ public class TicketController {
         this.ticketService = ticketService;
     }
 
-    @Path("/get/all")
+    @Path("/all")
     @GET
     @Produces("application/json")
     public List getAllTickets() {
         return this.ticketService.getAllTickets();
     }
 
-
-    @Path("/get/{id}")
+    @Path("/{id}")
     @GET
     @Produces("application/json")
     public Ticket getTicketById(@PathParam("id") int id) {
@@ -35,7 +34,7 @@ public class TicketController {
     }
 
     @Path("/delete/{id}")
-    @GET
+    @POST
     public void deleteTicket(@PathParam("id") int id) {this.ticketService.deleteTicket(id);}
 
     @Path("/create/json")
