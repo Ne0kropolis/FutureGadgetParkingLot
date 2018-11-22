@@ -5,4 +5,4 @@ INSERT INTO LOT
 VALUES (NEXT VALUE FOR lot_id_seq, 1, 'Cids Garage', 'Hammerhead', 20);
 
 INSERT INTO TICKET
-VALUES (NEXT VALUE FOR ticket_id_seq, 100, '2018-10-19', '10:15:10', '10:35:45', 30, false);
+VALUES (NEXT VALUE FOR ticket_id_seq, 100, '2018-08-08 20:08:08', '2018-08-08 20:40:08', 30, false);

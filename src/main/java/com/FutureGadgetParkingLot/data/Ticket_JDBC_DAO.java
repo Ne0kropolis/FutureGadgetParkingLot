@@ -40,21 +40,20 @@ public class Ticket_JDBC_DAO implements DAO<Ticket> {
 
     @Override
     public void insert(Ticket ticket) {
-        String query = "INSERT INTO TICKET VALUES(?,?,?,?,?,?,?)";
-        jdbcTemplate.update(query, ticket.getTicketId(), ticket.getLotId(), ticket.getDate(), ticket.getTimeIn(), ticket.getTimeOut(), ticket.getPrice(), ticket.getLost());
+        String query = "INSERT INTO TICKET VALUES(?,?,?,?,?,?)";
+        jdbcTemplate.update(query, ticket.getTicketId(), ticket.getLotId(), ticket.getTimeIn(), ticket.getTimeOut(), ticket.getPrice(), ticket.getLost());
     }
 
     @Override
     public void batchInsert(List<Ticket> ticketList) {
-        String query = "INSERT INTO TICKET VALUES(?,?,?,?,?,?,?);";
+        String query = "INSERT INTO TICKET VALUES(?,?,?,?,?,?);";
         this.jdbcTemplate.batchUpdate(query, new BatchPreparedStatementSetter() {
             @Override
             public void setValues(PreparedStatement preparedStatement, int i) throws SQLException {
                 preparedStatement.setInt(1, ticketList.get(i).getTicketId());
                 preparedStatement.setInt(2, ticketList.get(i).getLotId());
-                preparedStatement.setString(3, ticketList.get(i).getDate());
-                preparedStatement.setString(4, ticketList.get(i).getTimeIn());
-                preparedStatement.setString(4, ticketList.get(i).getTimeOut());
+                preparedStatement.setTimestamp(4, ticketList.get(i).getTimeIn());
+                preparedStatement.setTimestamp(4, ticketList.get(i).getTimeOut());
                 preparedStatement.setDouble(5, ticketList.get(i).getPrice());
                 preparedStatement.setBoolean(6, ticketList.get(i).getLost());
             }
@@ -71,7 +70,6 @@ public class Ticket_JDBC_DAO implements DAO<Ticket> {
         String query = "UPDATE TICKET SET Lot_Id=?, Ticket_Date=?, Ticket_Time_In=?, Ticket_Time_Out=?, Ticket_Price=?, Ticket_Lost=? Where Ticket_Id = ?";
         jdbcTemplate.update(query,
                 ticket.getLotId(),
-                ticket.getDate(),
                 ticket.getTimeIn(),
                 ticket.getTimeOut(),
                 ticket.getPrice(),
@@ -91,15 +89,10 @@ public class Ticket_JDBC_DAO implements DAO<Ticket> {
             return new Ticket(
                     rs.getInt("Ticket_id"),
                     rs.getInt("Lot_id"),
-                    rs.getString("Ticket_date"),
-                    rs.getString("Ticket_time_in"),
-                    rs.getString("Ticket_time_out"),
+                    rs.getTimestamp("Ticket_time_in"),
+                    rs.getTimestamp("Ticket_time_out"),
                     rs.getDouble("Ticket_Price"),
                     rs.getBoolean("Ticket_Lost"));
         }
-    }
-
-    public String hello() {
-        return ("Hello");
     }
 }

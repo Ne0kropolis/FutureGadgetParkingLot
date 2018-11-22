@@ -18,8 +18,8 @@ public class TicketTest {
     @Before
     public void initialize() {
         blankTicket = new Ticket();
-        ticketWithPrice = new Ticket(1, 100, "2018-11-09", "10:15", "11:20", 30, false);
-        ticketWithoutPrice = new Ticket(1, 100, "2018-11-09", "10:15", "11:20", false);
+        ticketWithPrice = new Ticket(1,100, java.sql.Timestamp.valueOf("2018-08-08 20:08:08"), java.sql.Timestamp.valueOf("2018-08-08 20:40:08"), 30, false);
+        ticketWithoutPrice = new Ticket(1,100, java.sql.Timestamp.valueOf("2018-08-08 20:08:08"), java.sql.Timestamp.valueOf("2018-08-08 20:40:08"), false);
     }
 
     @Test

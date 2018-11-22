@@ -36,6 +36,6 @@ public class TicketService {
 
     public void updateTicket(Ticket ticket) { this.ticketJdbcDao.update(ticket); }
 
-    public void deleteTicket(int id) {this.ticketJdbcDao.delete(id);}
+    public void deleteTicket(int id) {ticketJdbcDao.delete(id);}
 
 }

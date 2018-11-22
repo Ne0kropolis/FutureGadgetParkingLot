@@ -1,34 +1,31 @@
 package com.FutureGadgetParkingLot.domain;
 
 import java.io.Serializable;
-import java.util.List;
+import java.sql.Timestamp;
 
 public class Ticket implements Serializable {
 
     private int ticketId;
     private int lotId;
-    private String date;
-    private String timeIn;
-    private String timeOut;
+    private Timestamp timeIn;
+    private Timestamp timeOut;
     private double price;
     private boolean lost;
 
     public Ticket() {}
 
-    public Ticket(int ticketId, int lotId, String date, String timeIn, String timeOut, double price, boolean lost) {
+    public Ticket(int ticketId, int lotId, Timestamp timeIn, Timestamp timeOut, double price, boolean lost) {
         this.ticketId = ticketId;
         this.lotId = lotId;
-        this.date = date;
         this.timeIn = timeIn;
         this.timeOut = timeOut;
         this.price = price;
         this.lost = lost;
     }
 
-    public Ticket(int ticketId, int lotId, String date, String timeIn, String timeOut, boolean lost) {
+    public Ticket(int ticketId, int lotId, Timestamp timeIn, Timestamp timeOut, boolean lost) {
         this.ticketId = ticketId;
         this.lotId = lotId;
-        this.date = date;
         this.timeIn = timeIn;
         this.timeOut = timeOut;
         this.price = 0;
@@ -41,15 +38,11 @@ public class Ticket implements Serializable {
         return lotId;
     }
 
-    public String getDate() {
-        return date;
-    }
-
-    public String getTimeIn() {
+    public Timestamp getTimeIn() {
         return timeIn;
     }
 
-    public String getTimeOut() {
+    public Timestamp getTimeOut() {
         return timeOut;
     }
 
