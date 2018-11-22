@@ -45,6 +45,11 @@ public class Pricing_JDBC_DAO implements DAO<Pricing> {
         return (jdbcTemplate.query(query, new PricingMapper()));
     }
 
+    public List<Pricing> getPricingBySchemeNumber(int pricingSchemeNumber) {
+        String query = "SELECT * FROM PRICING WHERE Pricing_Scheme_Number =" + pricingSchemeNumber;
+        return jdbcTemplate.query(query, new PricingMapper());
+    }
+
     @Override
     public void insert(Pricing pricing) {
         String query = "INSERT INTO PRICING VALUES(?,?,?,?,?);";

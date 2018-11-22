@@ -26,6 +26,8 @@ public class PricingService {
         return (this.pricingJdbcDao.get(id));
     }
 
+    public List<Pricing> getPricingBySchemeNumber(int pricingSchemeNumber) {return this.pricingJdbcDao.getPricingBySchemeNumber(pricingSchemeNumber);}
+
     public void createPricing(Pricing pricing) {
         this.pricingJdbcDao.insert(pricing);
     }

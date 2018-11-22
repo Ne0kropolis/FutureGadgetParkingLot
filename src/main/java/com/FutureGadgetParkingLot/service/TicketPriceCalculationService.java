@@ -36,11 +36,15 @@ public class TicketPriceCalculationService {
         double price = 0;
         PricingScheme pricingScheme = this.checkPricingScheme(lotId);
         List<Pricing> prices = pricingScheme.getPrices();
+        List<Long> durations = pricingScheme.getDurations();
+
+        System.out.println(duration);
 
         if (!lost){
-            for (int i=0; i<prices.size()-1; i++) {
-                if (duration <= prices.get(i + 1).getDuration() && duration >= prices.get(i).getDuration()) {
-                    price = prices.get(i + 1).getPrice();
+            for (int i=0; i<durations.size()-1; i++) {
+                if (duration <= durations.get(i + 1) && duration >= durations.get(i)) {
+                    price = prices.get(i+1).getPrice();
+                    System.out.println(price = prices.get(i).getPrice());
                 }
             }
         } else {

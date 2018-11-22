@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a39757a5-b503-4edb-ab52-824e040c1fa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/DateCalculationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/DateCalculationServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/Ticket_JDBC_DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/Ticket_JDBC_DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/Lot_JDBC_DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/Lot_JDBC_DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/Pricing_JDBC_DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/Pricing_JDBC_DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/PricingScheme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/PricingScheme.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/PricingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/PricingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/TicketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/PricingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/PricingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/TicketPriceCalculationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/TicketPriceCalculationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/TicketService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1.2__Creating_ticket_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1.2__Creating_ticket_table.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1.4__Creating_dummy_data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1.4__Creating_dummy_data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TicketTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TicketTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -165,86 +167,123 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="16" />
-          <entry key="sql" value="3" />
-          <entry key="xml" value="1" />
+          <entry key="java" value="25" />
+          <entry key="sql" value="6" />
+          <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="16" />
-          <entry key="SQL" value="3" />
-          <entry key="XML" value="1" />
+          <entry key="JAVA" value="25" />
+          <entry key="SQL" value="6" />
+          <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="652" />
-          <entry key="sql" value="93" />
-          <entry key="txt" value="235" />
+          <entry key="java" value="2132" />
+          <entry key="sql" value="125" />
+          <entry key="txt" value="342" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="652" />
-          <entry key="PLAIN_TEXT" value="235" />
-          <entry key="SQL" value="93" />
+          <entry key="JAVA" value="2132" />
+          <entry key="PLAIN_TEXT" value="342" />
+          <entry key="SQL" value="125" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/Ticket_JDBC_DAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="92" column="35" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/DateCalculationService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="38" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/DateCalculationServiceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/TicketPriceCalculationService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+            <state relative-caret-position="340">
+              <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/LotTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/Pricing_JDBC_DAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+            <state relative-caret-position="179">
+              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/Pricing.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="46" column="99" selection-start-line="46" selection-start-column="99" selection-end-line="46" selection-end-column="99" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#843#844#0" expanded="true" />
+                <element signature="e#877#878#0" expanded="true" />
+                <element signature="e#1045#1046#0" expanded="true" />
+                <element signature="e#1078#1079#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/PricingService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="341">
+              <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/PricingController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1354#1355#0" expanded="true" />
+                <element signature="e#1412#1413#0" expanded="true" />
+                <element signature="e#1548#1549#0" expanded="true" />
+                <element signature="e#1611#1612#0" expanded="true" />
+                <element signature="e#1732#1733#0" expanded="true" />
+                <element signature="e#1790#1791#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/PricingScheme.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#515#521#0" expanded="true" />
+                <element signature="e#766#767#0" expanded="true" />
+                <element signature="e#820#821#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/PricingTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="6" column="60" lean-forward="true" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -255,23 +294,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/Ticket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-              <folding>
-                <element signature="e#985#986#0" expanded="true" />
-                <element signature="e#1013#1014#0" expanded="true" />
-                <element signature="e#1049#1050#0" expanded="true" />
-                <element signature="e#1078#1079#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TicketTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="21" column="156" lean-forward="true" selection-start-line="21" selection-start-column="156" selection-end-line="21" selection-end-column="156" />
+            <state relative-caret-position="437">
+              <caret line="54" column="57" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -280,10 +304,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V1.2__Creating_ticket_table.sql">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+            <state relative-caret-position="340">
+              <caret line="20" column="48" lean-forward="true" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -291,22 +315,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V1.4__Creating_dummy_data.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="98" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="98" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/TicketService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="36" column="75" selection-start-line="36" selection-start-column="75" selection-end-line="36" selection-end-column="75" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#623#624#0" expanded="true" />
-                <element signature="e#675#676#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="9" column="83" selection-start-line="9" selection-start-column="83" selection-end-line="9" selection-end-column="83" />
             </state>
           </provider>
         </entry>
@@ -345,7 +355,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V1__Creating_pricing_table.sql" />
         <option value="$PROJECT_DIR$/src/main/resources/db/migration/V1.1__Creating_lot_table.sql" />
         <option value="$PROJECT_DIR$/src/main/resources/db/migration/V1.3__Creating_table_sequences.sql" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/appconfig-mvc.xml" />
@@ -369,33 +378,34 @@
         <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/DBTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/flyway-init.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/PricingScheme.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/HelloRestService.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/Index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/styles.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/db/migration/V1.0__Creating_pricing_table.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/Pricing.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/DAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/LotService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/LotController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/Lot_JDBC_DAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/Pricing_JDBC_DAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/Lot.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/PricingService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/PricingController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/TicketController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/TicketService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V1.4__Creating_dummy_data.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/Ticket.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/DateCalculationService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/db/migration/V1.2__Creating_ticket_table.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/Ticket_JDBC_DAO.java" />
         <option value="$PROJECT_DIR$/src/test/java/DateCalculationServiceTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/TicketTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/Ticket.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/TicketController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/Lot_JDBC_DAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/TicketService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/Pricing_JDBC_DAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/PricingService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/PricingController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/Pricing.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/PricingScheme.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V1.4__Creating_dummy_data.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/TicketPriceCalculationService.java" />
       </list>
     </option>
   </component>
@@ -543,6 +553,21 @@
               <item name="Attempt 2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Attempt 2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Attempt 2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Attempt 2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Attempt 2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Attempt 2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -562,7 +587,7 @@
     <property name="DatabaseDriversLRU" value="hsqldb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542872086703" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542881065222" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -673,7 +698,7 @@
       <workItem from="1542607456576" duration="41693000" />
       <workItem from="1542744627474" duration="6093000" />
       <workItem from="1542803384543" duration="5737000" />
-      <workItem from="1542867559779" duration="3603000" />
+      <workItem from="1542867559779" duration="12241000" />
     </task>
     <task id="LOCAL-00001" summary="Added pom configuration&#10;Added codestyle plugins">
       <created>1542025563555</created>
@@ -836,7 +861,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542803623998</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Adding Date Calculation Service for duration calculations.&#10;Refactoring Ticket to support Timestamp">
+      <created>1542872138766</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1542872138766</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -863,7 +895,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104897000" />
+    <option name="totallyTimeSpent" value="113535000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -878,7 +910,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26865673" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26865673" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -888,7 +920,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -897,7 +929,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.329718" />
-      <window_info anchor="bottom" id="FindBugs-IDEA" order="11" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="11" weight="0.329718" />
       <window_info anchor="bottom" id="Spring" order="12" weight="0.329718" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="CheckStyle" order="14" weight="0.329718" />
@@ -947,7 +979,8 @@
     <MESSAGE value="Adding deletion methods for controllers and services." />
     <MESSAGE value="Adding Ticket Price Calculation Service.&#10;Modifying Pricing and Lot DAOs for service." />
     <MESSAGE value="Refactoring Price Calculation from Ticket and TicketTest.&#10;(Moved to Ticket Price Calculation Service)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring Price Calculation from Ticket and TicketTest.&#10;(Moved to Ticket Price Calculation Service)" />
+    <MESSAGE value="Adding Date Calculation Service for duration calculations.&#10;Refactoring Ticket to support Timestamp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding Date Calculation Service for duration calculations.&#10;Refactoring Ticket to support Timestamp" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/codeanalysis/basic_pmd_config.xml">
@@ -983,13 +1016,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="58" lean-forward="true" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/PricingScheme.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1034,34 +1060,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/HelloRestService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/Pricing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="30" lean-forward="true" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#663#664#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#738#739#0" expanded="true" />
-            <element signature="e#780#781#0" expanded="true" />
-            <element signature="e#818#819#0" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-            <element signature="e#913#914#0" expanded="true" />
-            <element signature="e#950#951#0" expanded="true" />
-            <element signature="e#657#658#0" expanded="true" />
-            <element signature="e#693#694#0" expanded="true" />
-            <element signature="e#758#759#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V1.1__Creating_lot_table.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/DAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1069,40 +1067,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/Lot_JDBC_DAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="75" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/PricingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="32" column="105" selection-start-line="32" selection-start-column="105" selection-end-line="32" selection-end-column="105" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/LotService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="30" column="85" selection-start-line="30" selection-start-column="85" selection-end-line="30" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/PricingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="50" column="56" selection-start-line="50" selection-start-column="56" selection-end-line="50" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1126,73 +1094,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/TicketController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="636">
-          <caret line="57" column="100" selection-start-line="57" selection-start-column="100" selection-end-line="57" selection-end-column="100" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#641#642#0" expanded="true" />
-            <element signature="e#698#699#0" expanded="true" />
-            <element signature="e#825#826#0" expanded="true" />
-            <element signature="e#884#885#0" expanded="true" />
-            <element signature="e#1130#1131#0" expanded="true" />
-            <element signature="e#1185#1186#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/Pricing_JDBC_DAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="70" column="42" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/PricingTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V1.0__Creating_pricing_table.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/Ticket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-          <folding>
-            <element signature="e#985#986#0" expanded="true" />
-            <element signature="e#1013#1014#0" expanded="true" />
-            <element signature="e#1049#1050#0" expanded="true" />
-            <element signature="e#1078#1079#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V1.4__Creating_dummy_data.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="98" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="98" />
         </state>
       </provider>
     </entry>
@@ -1219,18 +1124,6 @@
           <caret line="92" column="35" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/TicketService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="36" column="75" selection-start-line="36" selection-start-column="75" selection-end-line="36" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#623#624#0" expanded="true" />
-            <element signature="e#675#676#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1265,10 +1158,152 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/TicketController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="67" column="108" lean-forward="true" selection-start-line="67" selection-start-column="108" selection-end-line="67" selection-end-column="108" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#641#642#0" expanded="true" />
+            <element signature="e#698#699#0" expanded="true" />
+            <element signature="e#825#826#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
+            <element signature="e#1130#1131#0" expanded="true" />
+            <element signature="e#1185#1186#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V1.1__Creating_lot_table.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/Lot_JDBC_DAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/TicketService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="46" column="37" lean-forward="true" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#623#624#0" expanded="true" />
+            <element signature="e#675#676#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="48" lean-forward="true" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/Pricing_JDBC_DAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/PricingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/PricingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1354#1355#0" expanded="true" />
+            <element signature="e#1412#1413#0" expanded="true" />
+            <element signature="e#1548#1549#0" expanded="true" />
+            <element signature="e#1611#1612#0" expanded="true" />
+            <element signature="e#1732#1733#0" expanded="true" />
+            <element signature="e#1790#1791#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/PricingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="6" column="60" lean-forward="true" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/Ticket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="54" column="57" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/Pricing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="46" column="99" selection-start-line="46" selection-start-column="99" selection-end-line="46" selection-end-column="99" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#843#844#0" expanded="true" />
+            <element signature="e#877#878#0" expanded="true" />
+            <element signature="e#1045#1046#0" expanded="true" />
+            <element signature="e#1078#1079#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/PricingScheme.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#515#521#0" expanded="true" />
+            <element signature="e#766#767#0" expanded="true" />
+            <element signature="e#820#821#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V1.4__Creating_dummy_data.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="83" selection-start-line="9" selection-start-column="83" selection-end-line="9" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/TicketPriceCalculationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+        <state relative-caret-position="340">
+          <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
         </state>
       </provider>
     </entry>

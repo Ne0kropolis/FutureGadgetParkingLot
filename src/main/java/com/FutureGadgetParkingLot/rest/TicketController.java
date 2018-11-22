@@ -62,4 +62,9 @@ public class TicketController {
     @Consumes
     public void updateTicket(Ticket ticket) { this.ticketService.updateTicket(ticket);}
 
+    @Path("/calculate/json")
+    @POST
+    @Consumes("application/json")
+    public void calculatePriceOfTicket(Ticket ticket) {this.ticketService.createTicketWithoutPrice(ticket);}
+
 }

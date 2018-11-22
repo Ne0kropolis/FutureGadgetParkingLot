@@ -52,4 +52,6 @@ public class Ticket implements Serializable {
 
     public boolean getLost() { return lost; }
 
+    public void setPrice(double price) {this.price=price;}
+
 }

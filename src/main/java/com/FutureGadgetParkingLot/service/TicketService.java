@@ -12,10 +12,22 @@ import java.util.List;
 public class TicketService {
 
     private final Ticket_JDBC_DAO ticketJdbcDao;
+    private TicketPriceCalculationService ticketPriceCalculationService;
+    private DateCalculationService dateCalculationService;
 
     @Autowired
     public TicketService(@Qualifier("ticket_JDBC_DAO") Ticket_JDBC_DAO ticketJdbcDao) {
         this.ticketJdbcDao = ticketJdbcDao;
+    }
+
+    @Autowired
+    public void setTicketPriceCalculationService(TicketPriceCalculationService ticketPriceCalculationService) {
+        this.ticketPriceCalculationService = ticketPriceCalculationService;
+    }
+
+    @Autowired
+    public void setDateCalculationService(DateCalculationService dateCalculationService) {
+        this.dateCalculationService = dateCalculationService;
     }
 
     public List getAllTickets() {
@@ -30,7 +42,10 @@ public class TicketService {
         this.ticketJdbcDao.insert(ticket);
     }
 
-    public void createTicketWithoutPrice(Ticket ticket) {}
+    public void createTicketWithoutPrice(Ticket ticket) {
+        ticket.setPrice(ticketPriceCalculationService.calculateTicketPrice(dateCalculationService.calculateDuration(ticket), ticket.getLotId(), ticket.getLost()));
+        ticketJdbcDao.insert(ticket);
+    }
 
     public void createTickets(List<Ticket> ticketList) {this.ticketJdbcDao.batchInsert(ticketList);}
 

@@ -39,7 +39,7 @@ public class Lot_JDBC_DAO implements DAO<Lot> {
     }
 
     public Integer getPricingSchemeNumber(int id) {
-        String query = "SELECT Pricing_Scheme_Number FROM LOT WHERE Lot_ID= " + id;
+        String query = "SELECT * FROM LOT WHERE Lot_ID = " + id;
         return this.jdbct.queryForObject(query, new LotMapper()).getPricingSchemeNumber();
     }
 
