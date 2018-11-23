@@ -51,6 +51,10 @@ Automated tests can be triggered with mvn:test
 
 These include unit tests for the domain Entities, DAOs, Services, and Controllers.
 
+### CI
+
+https://travis-ci.com/Ne0kropolis/FutureGadgetParkingLot
+
 ### Codestyle Checks
 
 Caodestyle checks can be run with
