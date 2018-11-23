@@ -3,12 +3,9 @@ package com.FutureGadgetParkingLot.service;
 import com.FutureGadgetParkingLot.domain.Ticket;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.DateFormatter;
 import java.sql.Timestamp;
 import java.time.Duration;
 import java.time.LocalDateTime;
-import java.time.ZoneOffset;
-import java.time.format.DateTimeFormatter;
 
 @Service
 public class DateCalculationService {
@@ -25,7 +22,7 @@ public class DateCalculationService {
     }
 
     public static LocalDateTime localDateFromTimestamp(Timestamp timestamp) {
-        return LocalDateTime.ofInstant(timestamp.toInstant(), ZoneOffset.ofHours(0));
+        return timestamp.toLocalDateTime();
     }
 
     public void checkTimeOut(Ticket ticket) {
