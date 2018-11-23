@@ -26,13 +26,13 @@ public class LotService {
         return this.lotJdbcDao.get(id);
     }
 
-    public void createLot(Lot lot) {this.lotJdbcDao.insert(lot);}
+    public void createLot(Lot lot) { this.lotJdbcDao.insert(lot); }
 
-    public void createLots(List<Lot> lotList) {this.lotJdbcDao.batchInsert(lotList);}
+    public void createLots(List<Lot> lotList) { this.lotJdbcDao.batchInsert(lotList); }
 
-    public void updateLot(Lot lot) {this.lotJdbcDao.update(lot);}
+    public void updateLot(Lot lot) { this.lotJdbcDao.update(lot); }
 
-    public void updateLotCapacity(int id, int capcatiy) {this.lotJdbcDao.updateCapacity(id, capcatiy);}
+    public void updateLotCapacity(int id, int capcatiy) { this.lotJdbcDao.updateCapacity(id, capcatiy); }
 
-    public void deleteLot(int id) {this.lotJdbcDao.delete(id);}
+    public void deleteLot(int id) { this.lotJdbcDao.delete(id); }
 }

@@ -9,23 +9,24 @@ import java.time.LocalDateTime;
 
 @Service
 public class DateCalculationService {
-    public long calculateDuration(Ticket ticket) {
+    public long calculateDuration(final Ticket ticket) {
         checkTimeOut(ticket);
-        if (!ticket.getLost()){
+        if (!ticket.getLost()) {
             LocalDateTime timeIn = localDateFromTimestamp(ticket.getTimeIn());
             LocalDateTime timeOut = localDateFromTimestamp(ticket.getTimeOut());
             Duration duration = Duration.between(timeIn, timeOut);
             return (duration.toMinutes());
+        } else {
+            return 0;
         }
-        else return 0;
 
     }
 
-    public static LocalDateTime localDateFromTimestamp(Timestamp timestamp) {
+    public static LocalDateTime localDateFromTimestamp(final Timestamp timestamp) {
         return timestamp.toLocalDateTime();
     }
 
-    public void checkTimeOut(Ticket ticket) {
+    public void checkTimeOut(final Ticket ticket) {
         if (ticket.getTimeOut() == null) {
             ticket.setLost(true);
         }

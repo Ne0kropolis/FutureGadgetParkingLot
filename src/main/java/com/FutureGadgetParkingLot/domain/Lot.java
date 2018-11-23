@@ -9,9 +9,10 @@ public class Lot implements Serializable {
     private String lotAddress;
     private int lotCapacity;
 
-    public Lot() {}
+    public Lot() { }
 
-    public Lot(int lotId, int pricingSchemeNumber, String lotName, String lotAddress, int lotCapacity) {
+    public Lot(int lotId, int pricingSchemeNumber, String lotName,
+               String lotAddress, int lotCapacity) {
         this.lotId = lotId;
         this.pricingSchemeNumber = pricingSchemeNumber;
         this.lotName = lotName;

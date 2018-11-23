@@ -36,7 +36,7 @@ public class PricingController {
     @Path("/scheme/{id}")
     @GET
     @Produces("application/json")
-    public List<Pricing> getPricingBySchemeId(@PathParam("id") int id) {return this.pricingService.getPricingBySchemeNumber(id);}
+    public List<Pricing> getPricingBySchemeId(@PathParam("id") int id) { return this.pricingService.getPricingBySchemeNumber(id); }
 
     @Path("/create/json")
     @POST
@@ -61,6 +61,6 @@ public class PricingController {
 
     @Path("/delete/{id}")
     @DELETE
-    public void deletePricing(@PathParam("id") int id) {this.pricingService.deletePricing(id);}
+    public void deletePricing(@PathParam("id") int id) { this.pricingService.deletePricing(id); }
 
 }

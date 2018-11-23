@@ -10,7 +10,7 @@ public class Pricing implements Serializable {
     private String granularity;
     private double price;
 
-    public Pricing(){}
+    public Pricing(){ }
 
     public Pricing(int pricingId, int pricingSchemeNumber, int duration, String granularity, double price) {
         this.pricingId = pricingId;

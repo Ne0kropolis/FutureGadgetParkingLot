@@ -16,7 +16,7 @@ public class LotController {
     private final LotService lotService;
 
     @Autowired
-    public LotController(LotService lotService) {this.lotService = lotService;}
+    public LotController(LotService lotService) { this.lotService = lotService; }
 
     @Path("/all")
     @GET
@@ -42,7 +42,7 @@ public class LotController {
     @Path("/create/list/json")
     @POST
     @Produces("application/json")
-    public void createLots(List<Lot> lotList) {this.lotService.createLots(lotList);}
+    public void createLots(List<Lot> lotList) { this.lotService.createLots(lotList); }
 
     @Path("/update/json")
     @PUT

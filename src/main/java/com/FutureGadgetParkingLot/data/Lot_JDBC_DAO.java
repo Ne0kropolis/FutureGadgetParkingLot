@@ -102,7 +102,7 @@ public class Lot_JDBC_DAO implements DAO<Lot> {
     }
 
     public class LotMapper implements RowMapper<Lot> {
-        public Lot mapRow(ResultSet rs, int rowNum) throws SQLException {
+        public Lot mapRow(ResultSet rs, final int rowNum) throws SQLException {
             return new Lot(
                     rs.getInt("Lot_Id"),
                     rs.getInt("Pricing_Scheme_Number"),
