@@ -1,11 +1,11 @@
-#**Future Gadget Parking Lot**
+# Future Gadget Parking Lot
 
 The Future Gadget Parking Lot Application is a web-based application which provides the ability to create, retrieve, and rate parking lot tickets. The current version provides support for
 the tracking of multiple parking lots and pricing schemes.
 
 Future Gadget Parking Lot is a Maven based Project utilising the Java Spring framework with Resteasy Jax-rs services which consume and produce JSON payloads.
 
-##Getting Started
+## Getting Started
 
 First, clone the Future Gadget Parking Lot repository from Github to a location of your choice.
 
@@ -19,15 +19,15 @@ verify the application is running by visiting
 
 `http://localhost:8080/tickets/all`
 
-##Builds & Goals
+## Builds & Goals
 
-###Maven
+### Maven
 
 The project can be built using typical maven build goals such as
 
 `mvn clean compile package`
 
-###Flyway
+### Flyway
 
 If using an external database for flyway integration the flyway:migrate goal can be run with the appropriate versioning files to build the base schema and insert dummy testing data
 
@@ -37,13 +37,13 @@ In the event of a database corruption the flyway:clean goal can be used to undo 
 
 `mvn flyway:clean`
 
-###Tomcat
+### Tomcat
 
 An embedded tomcat server can be run with the tomcat7:run goal
 
 `mvn tomcat7:run`
 
-###Automated Testing
+### Automated Testing
 
 Automated tests can be triggered with mvn:test
 
@@ -51,7 +51,7 @@ Automated tests can be triggered with mvn:test
 
 These include unit tests for the domain Entities, DAOs, Services, and Controllers.
 
-###Codestyle Checks
+### Codestyle Checks
 
 Caodestyle checks can be run with
 
@@ -63,13 +63,13 @@ and
 
 Checkstyle currently runs the Sun default codestyle checkstyle.xml schemas
 
-#HttpRequests
+# HttpRequests
 
 This section contains a comprehensive list of the possible application URI's and requests.
 
-##Pricing
+## Pricing
 
-###@GET
+### @GET
 
 `http://localhost:8080/pricing/all`
 
@@ -83,7 +83,7 @@ retrieves a single pricing object with a given pricing Id.
 
 retrieves a list of all pricing objects with a given pricing scheme number.
 
-###@POST
+### @POST
 
 `http://localhost:8080/pricing/create/json`
 
@@ -103,21 +103,21 @@ creates a list of pricing objects from a given json.
  
 `http://localhost:8080/pricing/create/list/json`
 
-###@PUT
+### @PUT
 
 updates a pricing object from a given json.
 
 `http://localhost:8080/pricing/update/json`
 
-###@Delete
+### @Delete
 
 deletes a pricing object with a given id from the database.
 
 `http://localhost:8080/pricing/delete/{id}`
 
-##Lot
+## Lot
 
-###@GET
+### @GET
 
 `http://localhost:8080/lot/all`
 
@@ -127,7 +127,7 @@ retrieves a list of all lot objects from the database
 
 retrieves a single lot object with a given pricing Id.
 
-###@POST
+### @POST
 
 `http://localhost:8080/lot/create/json`
 
@@ -147,7 +147,7 @@ creates a list of lot objects from a given json.
  
 `http://localhost:8080/lot/create/list/json`
 
-###@PUT
+### @PUT
 
 updates a lot object from a given json.
 
@@ -157,17 +157,17 @@ updates the capacity of a lot with a given id
 
 `http://localhost:8080/lot/query/capacity?id=value&capacity=value`
 
-###@Delete
+### @Delete
 
 deletes a lot object with a given id from the database.
 
 `http://localhost:8080/pricing/delete/{id}`
 
-##Ticket
+## Ticket
 
 Ticket times are processed as Timestamps. A ticket can be created without a time_out or price parameter. These tickets may have their prices calculated individually or as a batch at a later time.
 
-###@GET
+### @GET
 
 `http://localhost:8080/tickets/all`
 
@@ -185,7 +185,7 @@ retrieves a list of all tickets from the database and processes them for outstan
 
 retrieves a single ticket from the database and process it for any outstanding fee.
 
-###@POST
+### @POST
 
 `http://localhost:8080/tickets/create/json`
 
@@ -204,24 +204,24 @@ creates a list of ticket objects from a given json.
  
 `http://localhost:8080/tickets/create/list/json`
 
-###@PUT
+### @PUT
 
 updates a ticket object from a given json.
 
 `http://localhost:8080/tickets/update/json`
 
 
-###@Delete
+### @Delete
 
 deletes a ticket object with a given id from the database.
 
 `http://localhost:8080/pricing/delete/{id}`
 
-##License
+## License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details
 
-##Acknowledgements
+## Acknowledgements
 
 The following resources were utilised in the making of this project:
 
