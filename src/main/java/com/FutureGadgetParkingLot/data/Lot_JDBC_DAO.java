@@ -14,6 +14,9 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Implementation of DAO for Lot Domain Object.
+ */
 @Repository
 public class Lot_JDBC_DAO implements DAO<Lot> {
     private DataSource dataSource;
@@ -38,6 +41,11 @@ public class Lot_JDBC_DAO implements DAO<Lot> {
         return (jdbct.query(query, new LotMapper()));
     }
 
+    /**
+     * Retrieves a pricing scheme number for a given lot id.
+     * @param id: lotId
+     * @return int pricingSchemeNumber
+     */
     public Integer getPricingSchemeNumber(int id) {
         String query = "SELECT * FROM LOT WHERE Lot_Id = " + id;
         return Objects.requireNonNull(this.jdbct.queryForObject(query, new LotMapper())).getPricingSchemeNumber();
@@ -90,6 +98,11 @@ public class Lot_JDBC_DAO implements DAO<Lot> {
         );
     }
 
+    /**
+     * Change capacity for a given lot.
+     * @param id: lotId
+     * @param capacity: new capacity
+     */
     public void updateCapacity(int id, int capacity) {
         String query = "UPDATE LOT SET Lot_Capacity=? WHERE Lot_Id=?";
         jdbct.update(query, capacity, id);
@@ -101,6 +114,9 @@ public class Lot_JDBC_DAO implements DAO<Lot> {
         jdbct.update(query, id);
     }
 
+    /**
+     * Rowmapper for Lot queries
+     */
     public class LotMapper implements RowMapper<Lot> {
         public Lot mapRow(ResultSet rs, final int rowNum) throws SQLException {
             return new Lot(

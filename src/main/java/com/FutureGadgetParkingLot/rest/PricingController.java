@@ -8,6 +8,10 @@ import org.springframework.stereotype.Controller;
 import javax.ws.rs.*;
 import java.util.List;
 
+/**
+ * Controller for Pricing Request Mappings
+ */
+
 @Controller
 @Path("/pricing")
 public class PricingController {

@@ -1,4 +1,7 @@
 package com.FutureGadgetParkingLot.domain;
+/**
+ * Domain Object for Ticket.
+ */
 
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -23,6 +26,14 @@ public class Ticket implements Serializable {
         this.lost = lost;
     }
 
+    /**
+     * Constructor for a ticket without a price.
+     * @param ticketId
+     * @param lotId
+     * @param timeIn
+     * @param timeOut
+     * @param lost
+     */
     public Ticket(int ticketId, int lotId, Timestamp timeIn, Timestamp timeOut, boolean lost) {
         this.ticketId = ticketId;
         this.lotId = lotId;
@@ -32,6 +43,13 @@ public class Ticket implements Serializable {
         this.lost = lost;
     }
 
+    /**
+     * Constructor for a ticket without an exit time or price.
+     * @param ticketId
+     * @param lotId
+     * @param timeIn
+     * @param lost
+     */
     public Ticket(int ticketId, int lotId, Timestamp timeIn, boolean lost) {
         this.ticketId = ticketId;
         this.lotId = lotId;

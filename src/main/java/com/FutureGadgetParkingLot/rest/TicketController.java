@@ -9,6 +9,10 @@ import javax.ws.rs.*;
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+ * Controller for Ticket Request Mappings.
+ */
+
 @Controller
 @Path("/tickets")
 public class TicketController {

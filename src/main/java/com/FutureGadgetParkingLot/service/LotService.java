@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * Lot Service Implementation
+ */
 @Service
 public class LotService {
 
@@ -32,6 +35,11 @@ public class LotService {
 
     public void updateLot(Lot lot) { this.lotJdbcDao.update(lot); }
 
+    /**
+     * update the capacity of a given lot.
+     * @param id: lotId of given Lot
+     * @param capcatiy: new capacity value of lot on ticket creation or retrieval.
+     */
     public void updateLotCapacity(int id, int capcatiy) { this.lotJdbcDao.updateCapacity(id, capcatiy); }
 
     public void deleteLot(int id) { this.lotJdbcDao.delete(id); }

@@ -8,6 +8,10 @@ import org.springframework.stereotype.Controller;
 import javax.ws.rs.*;
 import java.util.List;
 
+/**
+ * Controller for Lot Request Mappings
+ */
+
 @Controller
 @Path("/lot")
 public class LotController {

@@ -1,4 +1,7 @@
 package com.FutureGadgetParkingLot.domain;
+/**
+ * Domain Object for a Lot
+ */
 
 import java.io.Serializable;
 

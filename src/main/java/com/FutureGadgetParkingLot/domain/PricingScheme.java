@@ -1,4 +1,7 @@
 package com.FutureGadgetParkingLot.domain;
+/**
+ * Pricing Scheme is an object which maintains a list of several pricing objects with a shared pricing scheme number.
+ */
 
 import java.util.Comparator;
 import java.util.List;
@@ -19,6 +22,12 @@ public class PricingScheme {
 
     public List<Pricing> getPrices() {return prices;}
 
+    /**
+     * Iterates through the list of Pricing objects in the current PricingScheme and extracts the Lost ticket price and
+     * multiplies the listed durations by their granular values to a duration in minutes.
+     *
+     * @return sorted list of Pricing objects by their durations.
+     */
     public List<Pricing> getDurations() {
 
         for (int i=0; i<prices.size(); i++) {
@@ -44,9 +53,12 @@ public class PricingScheme {
         return  prices;
     }
 
+    /**
+     * Sets the lost price for the given pricing scheme
+     * @param lostTicketPrice: lost ticket price obtained from getDurations()
+     */
     public void setLostTicketPrice(double lostTicketPrice) {
         this.lostTicketPrice = lostTicketPrice;
     }
 
-    public static Comparator<Long> sortByDuration = (o1, o2) -> (Long.compare(o1, o2));
 }

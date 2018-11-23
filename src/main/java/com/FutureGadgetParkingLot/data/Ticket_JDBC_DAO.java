@@ -13,6 +13,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+ * JDBC Implementation of DAO for Ticket Domain Object.
+ */
 @Component
 public class Ticket_JDBC_DAO implements DAO<Ticket> {
     private DataSource dataSource;
@@ -49,6 +52,11 @@ public class Ticket_JDBC_DAO implements DAO<Ticket> {
         batchTicketSetValues(ticketList, query);
     }
 
+    /**
+     * Batch update for a list of tickets after their prices are calculated.
+     * @param ticketList
+     * @throws SQLException
+     */
     public void batchUpdate(List<Ticket> ticketList) throws SQLException {
         String query = "UPDATE TICKET SET Lot_Id=?, Ticket_Date=?, Ticket_Time_In=?, Ticket_Time_Out=?, Ticket_Price=?, Ticket_Lost=? Where Ticket_Id = ?;";
         batchTicketSetValues(ticketList, query);
@@ -73,6 +81,12 @@ public class Ticket_JDBC_DAO implements DAO<Ticket> {
         this.jdbcTemplate.update(query, id);
     }
 
+    /**
+     * Shared setValues Implementation for batch inserts and updates.
+     * @param ticketList
+     * @param query: query string for update or insert.
+     * @throws SQLException
+     */
     private void batchTicketSetValues(List<Ticket> ticketList, String query) throws SQLException {
         this.jdbcTemplate.batchUpdate(query, new BatchPreparedStatementSetter() {
             @Override
@@ -92,6 +106,9 @@ public class Ticket_JDBC_DAO implements DAO<Ticket> {
         });
     }
 
+    /**
+     * Rowmapper for Ticket queries.
+     */
     public class TicketMapper implements RowMapper<Ticket> {
 
         public Ticket mapRow(ResultSet rs, int rowNum) throws SQLException {

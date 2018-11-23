@@ -1,4 +1,7 @@
 package com.FutureGadgetParkingLot.domain;
+/**
+ * Domain object for Pricing.
+ */
 
 import java.io.Serializable;
 import java.util.Comparator;
@@ -42,6 +45,9 @@ public class Pricing implements Serializable {
 
     public void setDuration(int duration) { this.duration = duration;}
 
+    /**
+     * Comparator for sorting durations in ascending order.
+     */
     public static Comparator<Pricing> sortByDuration = (o1, o2) -> (Integer.compare(o1.duration, o2.duration));
 
 

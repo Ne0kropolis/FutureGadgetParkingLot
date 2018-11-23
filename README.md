@@ -251,10 +251,10 @@ The following resources were utilised in the making of this project:
 
 - https://www.mkyong.com/spring/maven-spring-jdbc-example/
 
-https://www.journaldev.com/2552/spring-rest-example-tutorial-spring-restful-web-services
+- https://www.journaldev.com/2552/spring-rest-example-tutorial-spring-restful-web-services
 
-https://www.linkedin.com/learning/restful-service-with-jax-rs-2-0?u=26889562
+- https://www.linkedin.com/learning/restful-service-with-jax-rs-2-0?u=26889562
 
-https://www.tutorialspoint.com/spring/spring_jdbc_framework.htm
+- https://www.tutorialspoint.com/spring/spring_jdbc_framework.htm
 
 

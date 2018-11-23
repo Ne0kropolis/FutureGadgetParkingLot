@@ -9,6 +9,10 @@ import org.springframework.stereotype.Service;
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+ * Ticket Service Implementation.
+ * receives calls from Ticket Controller and links them to Lot JDBC DAO.
+ */
 @Service
 public class TicketService {
 
@@ -37,6 +41,11 @@ public class TicketService {
 
     public Ticket getTicketById(int id) { return (this.ticketJdbcDao.get(id)); }
 
+    /**
+     * Retrieves a list of Ticket Object from DAO and processes them for outstanding payments.
+     * @return List<Ticket>: ArrayList of Tickets with calculated prices.
+     * @throws SQLException
+     */
     public List calculateAllOutstandingTickets() throws SQLException {
         List<Ticket> ticketList = ticketJdbcDao.getAll();
         for (int i=0; i<ticketList.size();i++) {
@@ -49,6 +58,11 @@ public class TicketService {
         return ticketList;
     }
 
+    /**
+     * Retrieves a single ticket and processes it for any outstanding payment.
+     * @param id: ticketId
+     * @return Ticket with calculated price.
+     */
     public Ticket calculateOutstandingTicket(int id) {
         Ticket ticket = ticketJdbcDao.get(id);
         if (ticket.getPrice() == 0) {

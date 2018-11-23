@@ -14,6 +14,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+ * JDBC Implementation of DAO for Pricing Domain Object
+ */
 @Repository
 public class Pricing_JDBC_DAO implements DAO<Pricing> {
     private DataSource dataSource;
@@ -32,6 +35,11 @@ public class Pricing_JDBC_DAO implements DAO<Pricing> {
         return (jdbcTemplate.queryForObject(query, new PricingMapper()));
     }
 
+    /**
+     * Retrieve all Pricing rows with the same pricing scheme and store it as a PricingScheme Object.
+     * @param pricingSchemeNumber
+     * @return PricingScheme of Pricings with same pricingSchemeNumber
+     */
     public PricingScheme getPricingScheme(int pricingSchemeNumber) {
         String query = "SELECT * FROM PRICING WHERE Pricing_Scheme_Number =" + pricingSchemeNumber;
         List<Pricing> pricingList = jdbcTemplate.query(query, new PricingMapper());
@@ -44,6 +52,11 @@ public class Pricing_JDBC_DAO implements DAO<Pricing> {
         return (jdbcTemplate.query(query, new PricingMapper()));
     }
 
+    /**
+     * Retrieve a list of all Pricing rows with the same pricing scheme and return them as a list.
+     * @param pricingSchemeNumber
+     * @return List<Pricing>
+     */
     public List<Pricing> getPricingBySchemeNumber(int pricingSchemeNumber) {
         String query = "SELECT * FROM PRICING WHERE Pricing_Scheme_Number =" + pricingSchemeNumber;
         return jdbcTemplate.query(query, new PricingMapper());
@@ -101,6 +114,9 @@ public class Pricing_JDBC_DAO implements DAO<Pricing> {
         jdbcTemplate.update(query, id);
     }
 
+    /**
+     * Rowmapper for Pricing queries.
+     */
     public class PricingMapper implements RowMapper<Pricing> {
         public Pricing mapRow(ResultSet rs, int rowNum) throws SQLException {
             return new Pricing(
