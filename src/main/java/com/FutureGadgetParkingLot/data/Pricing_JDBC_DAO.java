@@ -1,6 +1,5 @@
 package com.FutureGadgetParkingLot.data;
 
-import com.FutureGadgetParkingLot.domain.Lot;
 import com.FutureGadgetParkingLot.domain.Pricing;
 import com.FutureGadgetParkingLot.domain.PricingScheme;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,6 @@
 package com.FutureGadgetParkingLot.data;
 
 import com.FutureGadgetParkingLot.domain.Lot;
-import com.FutureGadgetParkingLot.domain.Ticket;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -13,6 +12,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Objects;
 
 @Repository
 public class Lot_JDBC_DAO implements DAO<Lot> {
@@ -29,7 +29,7 @@ public class Lot_JDBC_DAO implements DAO<Lot> {
     @Override
     public Lot get(int id) {
         String query = "SELECT * FROM  LOT WHERE Lot_Id = " + id + ";";
-        return ((Lot) jdbct.queryForObject(query, new LotMapper ()));
+        return ( jdbct.queryForObject(query, new LotMapper ()));
     }
 
     @Override
@@ -39,8 +39,8 @@ public class Lot_JDBC_DAO implements DAO<Lot> {
     }
 
     public Integer getPricingSchemeNumber(int id) {
-        String query = "SELECT * FROM LOT WHERE Lot_ID = " + id;
-        return this.jdbct.queryForObject(query, new LotMapper()).getPricingSchemeNumber();
+        String query = "SELECT * FROM LOT WHERE Lot_Id = " + id;
+        return Objects.requireNonNull(this.jdbct.queryForObject(query, new LotMapper())).getPricingSchemeNumber();
     }
 
     @Override
@@ -52,7 +52,7 @@ public class Lot_JDBC_DAO implements DAO<Lot> {
                 lot.getPricingSchemeNumber(),
                 lot.getLotName(),
                 lot.getLotAddress(),
-                lot.getLotCapactiy()
+                lot.getlotCapacity()
         );
     }
 
@@ -66,7 +66,7 @@ public class Lot_JDBC_DAO implements DAO<Lot> {
                 preparedStatement.setInt(2, lotList.get(i).getPricingSchemeNumber());
                 preparedStatement.setString(3, lotList.get(i).getLotName());
                 preparedStatement.setString(4, lotList.get(i).getLotAddress());
-                preparedStatement.setInt(5, lotList.get(i).getLotCapactiy());
+                preparedStatement.setInt(5, lotList.get(i).getlotCapacity());
             }
 
             @Override
@@ -85,9 +85,14 @@ public class Lot_JDBC_DAO implements DAO<Lot> {
                 lot.getPricingSchemeNumber(),
                 lot.getLotName(),
                 lot.getLotAddress(),
-                lot.getLotCapactiy(),
+                lot.getlotCapacity(),
                 lot.getLotId()
         );
+    }
+
+    public void updateCapacity(int id, int capacity) {
+        String query = "UPDATE LOT SET Lot_Capacity=? WHERE Lot_Id=?";
+        jdbct.update(query, capacity, id);
     }
 
     @Override

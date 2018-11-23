@@ -32,10 +32,6 @@ public class LotController {
         return this.lotService.getLotById(id);
     }
 
-    @Path("/delete/{id}")
-    @POST
-    public void deleteLot(@PathParam("id") int id) { this.lotService.deleteLot(id);}
-
     @Path("/create/json")
     @POST
     @Produces("application/json")
@@ -49,9 +45,19 @@ public class LotController {
     public void createLots(List<Lot> lotList) {this.lotService.createLots(lotList);}
 
     @Path("/update/json")
-    @POST
+    @PUT
     @Consumes("application/json")
     public void updateLot(Lot lot) {
         this.lotService.updateLot(lot);
     }
+
+    @Path("/query/capacity")
+    @PUT
+    public void updateLotCapacity(@QueryParam("id") int id, @QueryParam("capacity")int capacity) {
+        this.lotService.updateLotCapacity(id, capacity);
+    }
+
+    @Path("/delete/{id}")
+    @DELETE
+    public void deleteLot(@PathParam("id") int id) { this.lotService.deleteLot(id);}
 }

@@ -39,12 +39,10 @@ public class TicketService {
     }
 
     public void createTicket(Ticket ticket) {
+        if (ticket.getPrice() == 0) {
+            ticket.setPrice(ticketPriceCalculationService.calculateTicketPrice(dateCalculationService.calculateDuration(ticket), ticket.getLotId(), ticket.getLost()));
+        }
         this.ticketJdbcDao.insert(ticket);
-    }
-
-    public void createTicketWithoutPrice(Ticket ticket) {
-        ticket.setPrice(ticketPriceCalculationService.calculateTicketPrice(dateCalculationService.calculateDuration(ticket), ticket.getLotId(), ticket.getLost()));
-        ticketJdbcDao.insert(ticket);
     }
 
     public void createTickets(List<Ticket> ticketList) {this.ticketJdbcDao.batchInsert(ticketList);}

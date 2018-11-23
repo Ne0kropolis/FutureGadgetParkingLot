@@ -33,10 +33,6 @@ public class TicketController {
         return this.ticketService.getTicketById(id);
     }
 
-    @Path("/delete/{id}")
-    @POST
-    public void deleteTicket(@PathParam("id") int id) {this.ticketService.deleteTicket(id);}
-
     @Path("/create/json")
     @POST
     @Consumes("application/json")
@@ -56,13 +52,12 @@ public class TicketController {
     public void createTickets(List<Ticket> ticketList) { this.ticketService.createTickets(ticketList);}
 
     @Path("/update/json")
-    @POST
+    @PUT
     @Consumes
     public void updateTicket(Ticket ticket) { this.ticketService.updateTicket(ticket);}
 
-    @Path("/calculate/json")
-    @POST
-    @Consumes("application/json")
-    public void calculatePriceOfTicket(Ticket ticket) {this.ticketService.createTicketWithoutPrice(ticket);}
+    @Path("/delete/{id}")
+    @DELETE
+    public void deleteTicket(@PathParam("id") int id) {this.ticketService.deleteTicket(id);}
 
 }

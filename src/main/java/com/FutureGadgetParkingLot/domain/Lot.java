@@ -7,16 +7,16 @@ public class Lot implements Serializable {
     private int pricingSchemeNumber;
     private String lotName;
     private String lotAddress;
-    private int lotCapactiy;
+    private int lotCapacity;
 
     public Lot() {}
 
-    public Lot(int lotId, int pricingSchemeNumber, String lotName, String lotAddress, int lotCapactiy) {
+    public Lot(int lotId, int pricingSchemeNumber, String lotName, String lotAddress, int lotCapacity) {
         this.lotId = lotId;
         this.pricingSchemeNumber = pricingSchemeNumber;
         this.lotName = lotName;
         this.lotAddress = lotAddress;
-        this.lotCapactiy = lotCapactiy;
+        this.lotCapacity = lotCapacity;
     }
 
     public int getLotId() {
@@ -35,7 +35,7 @@ public class Lot implements Serializable {
         return lotAddress;
     }
 
-    public int getLotCapactiy() {
-        return lotCapactiy;
+    public int getlotCapacity() {
+        return lotCapacity;
     }
 }
