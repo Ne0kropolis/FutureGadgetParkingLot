@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a39757a5-b503-4edb-ab52-824e040c1fa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/TicketControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/Lot_JDBC_DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/Lot_JDBC_DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/Lot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/Lot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/Pricing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/Pricing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/LotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/LotController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/PricingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/PricingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/DateCalculationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/DateCalculationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/LotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/LotService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -82,7 +73,7 @@
           <entry key="dummy" value="10" />
           <entry key="java" value="11935" />
           <entry key="sql" value="1071" />
-          <entry key="txt" value="1744" />
+          <entry key="txt" value="1787" />
           <entry key="xml" value="539" />
           <entry key="yml" value="5" />
         </counts>
@@ -90,7 +81,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="11935" />
-          <entry key="PLAIN_TEXT" value="1754" />
+          <entry key="PLAIN_TEXT" value="1797" />
           <entry key="SQL" value="1071" />
           <entry key="XML" value="539" />
           <entry key="YAML" value="5" />
@@ -278,8 +269,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/TicketControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="103" column="1" lean-forward="true" selection-start-line="103" selection-start-column="1" selection-end-line="103" selection-end-column="1" />
+            <state relative-caret-position="391">
+              <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -402,17 +393,6 @@
           <item name="FutureGadgetParkingLot" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="FutureGadgetParkingLot" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="FutureGadgetParkingLot" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
-          <item name="tomcat7" type="36feed69:MavenProjectsStructure$PluginNode" />
-        </path>
       </expand>
       <select />
     </treeState>
@@ -530,10 +510,11 @@
     <property name="DatabaseDriversLRU" value="hsqldb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542978369755" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542978686101" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -644,7 +625,7 @@
       <workItem from="1542803384543" duration="5737000" />
       <workItem from="1542867559779" duration="12241000" />
       <workItem from="1542922607579" duration="822000" />
-      <workItem from="1542973697824" duration="4668000" />
+      <workItem from="1542973697824" duration="4983000" />
     </task>
     <task id="LOCAL-00001" summary="Added pom configuration&#10;Added codestyle plugins">
       <created>1542025563555</created>
@@ -828,7 +809,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542956099731</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Adding of Ticket Controller Unit Test.">
+      <created>1542978410655</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1542978410655</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -864,7 +852,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126696000" />
+    <option name="totallyTimeSpent" value="127011000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -879,7 +867,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27132195" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27132195" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -909,7 +897,7 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven Projects" order="6" visible="true" weight="0.32995737" />
+      <window_info active="true" anchor="right" id="Maven Projects" order="6" visible="true" weight="0.32995737" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Database" order="8" weight="0.32995737" />
       <window_info anchor="right" id="Bean Validation" order="9" />
@@ -925,7 +913,6 @@
     <ignored-roots>
       <path value="$USER_HOME$" />
     </ignored-roots>
-    <MESSAGE value="Added travisci yml configuration" />
     <MESSAGE value="Added Flyway Configuration&#10;Added initial Schema Setup/Migration" />
     <MESSAGE value="Added Dummy Data For Flyway Database" />
     <MESSAGE value="Adjusted File Structure&#10;Added DAO Interface" />
@@ -950,7 +937,8 @@
     <MESSAGE value="Adding Date Calculation Service for duration calculations.&#10;Refactoring Ticket to support Timestamp" />
     <MESSAGE value="Refactoring of pricing scheme and price calculations for variable granularity time increments." />
     <MESSAGE value="Refactoring of controller http requests.&#10;Adding of Lot Capacity update to services and controllers." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring of controller http requests.&#10;Adding of Lot Capacity update to services and controllers." />
+    <MESSAGE value="Adding of Ticket Controller Unit Test." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding of Ticket Controller Unit Test." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/94432967-cec8-4ab3-9af5-4cb8148e5701/console.sql" />
@@ -1277,8 +1265,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TicketControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="103" column="1" lean-forward="true" selection-start-line="103" selection-start-column="1" selection-end-line="103" selection-end-column="1" />
+        <state relative-caret-position="391">
+          <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

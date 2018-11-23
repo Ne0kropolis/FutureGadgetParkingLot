@@ -26,7 +26,7 @@ public class DateCalculationServiceTest {
     public void shouldConvertTimestampToLocalDateTime() {
         String time = "2018-08-08T20:08:08";
         LocalDateTime expectedLocalDateTime = LocalDateTime.parse(time);
-        LocalDateTime actualLocalDateTime = dateCalculationService.localDateFromTimestamp(ticket.getTimeIn());
+        LocalDateTime actualLocalDateTime = DateCalculationService.localDateFromTimestamp(ticket.getTimeIn());
 
 
         assertEquals(expectedLocalDateTime, actualLocalDateTime);
