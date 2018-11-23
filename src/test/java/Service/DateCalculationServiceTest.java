@@ -1,3 +1,5 @@
+package Service;
+
 import com.FutureGadgetParkingLot.domain.Ticket;
 import com.FutureGadgetParkingLot.service.DateCalculationService;
 import org.junit.Before;

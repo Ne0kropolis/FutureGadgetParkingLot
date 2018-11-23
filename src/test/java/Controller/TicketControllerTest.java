@@ -1,3 +1,5 @@
+package Controller;
+
 import com.FutureGadgetParkingLot.domain.Ticket;
 import com.FutureGadgetParkingLot.rest.TicketController;
 import com.FutureGadgetParkingLot.service.TicketService;
@@ -7,6 +9,7 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -66,7 +69,7 @@ public class TicketControllerTest {
     }
 
     @Test
-    public void shouldCreateABatchOfTickets() {
+    public void shouldCreateABatchOfTickets() throws SQLException {
 
         ArgumentCaptor ticketCapture = ArgumentCaptor.forClass(Ticket.class);
 

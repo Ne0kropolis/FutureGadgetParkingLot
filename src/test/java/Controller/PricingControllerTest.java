@@ -1,3 +1,5 @@
+package Controller;
+
 import com.FutureGadgetParkingLot.domain.Pricing;
 import com.FutureGadgetParkingLot.rest.PricingController;
 import com.FutureGadgetParkingLot.service.PricingService;

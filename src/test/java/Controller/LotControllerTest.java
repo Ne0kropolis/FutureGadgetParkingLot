@@ -1,3 +1,5 @@
+package Controller;
+
 import com.FutureGadgetParkingLot.domain.Lot;
 import com.FutureGadgetParkingLot.rest.LotController;
 import com.FutureGadgetParkingLot.service.LotService;

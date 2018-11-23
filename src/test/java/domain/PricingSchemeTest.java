@@ -1,3 +1,5 @@
+package domain;
+
 import com.FutureGadgetParkingLot.domain.Pricing;
 import com.FutureGadgetParkingLot.domain.PricingScheme;
 import org.junit.Before;

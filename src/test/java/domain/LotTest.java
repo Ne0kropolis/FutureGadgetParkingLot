@@ -1,3 +1,5 @@
+package domain;
+
 import com.FutureGadgetParkingLot.domain.Lot;
 import org.junit.Before;
 import org.junit.Test;
