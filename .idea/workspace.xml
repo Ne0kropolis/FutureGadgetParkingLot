@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a39757a5-b503-4edb-ab52-824e040c1fa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/PricingSchemeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/Ticket_JDBC_DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/Ticket_JDBC_DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/PricingScheme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/PricingScheme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/TicketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/TicketService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -142,29 +136,29 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="3902" />
-          <entry key="md" value="2811" />
+          <entry key="md" value="3787" />
           <entry key="sql" value="5" />
-          <entry key="txt" value="234" />
+          <entry key="txt" value="294" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="3902" />
-          <entry key="Markdown" value="2811" />
-          <entry key="PLAIN_TEXT" value="234" />
+          <entry key="Markdown" value="3787" />
+          <entry key="PLAIN_TEXT" value="294" />
           <entry key="SQL" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="32" />
+          <entry key="java" value="36" />
           <entry key="md" value="1" />
           <entry key="sql" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="32" />
+          <entry key="JAVA" value="36" />
           <entry key="Markdown" value="1" />
           <entry key="SQL" value="1" />
         </counts>
@@ -210,51 +204,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/Ticket_JDBC_DAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="961">
-              <caret line="93" selection-start-line="93" selection-end-line="93" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2522#2523#0" expanded="true" />
-                <element signature="e#2578#2579#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="187">
-                <caret line="97" column="19" selection-start-line="97" selection-start-column="19" selection-end-line="97" selection-end-column="19" />
+              <first_editor relative-caret-position="194">
+                <caret line="225" column="23" selection-start-line="225" selection-start-column="23" selection-end-line="225" selection-end-column="23" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/TicketController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="47" column="45" lean-forward="true" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1357#1358#0" expanded="true" />
-                <element signature="e#1392#1393#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/TicketService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/LotController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="56" column="35" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
+            <state relative-caret-position="434">
+              <caret line="61" column="43" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -348,10 +314,10 @@
         <option value="$PROJECT_DIR$/src/test/java/PricingControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/domain/PricingScheme.java" />
         <option value="$PROJECT_DIR$/src/test/java/PricingSchemeTest.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/Ticket_JDBC_DAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/service/TicketService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/TicketController.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -508,7 +474,7 @@
     <property name="DatabaseDriversLRU" value="hsqldb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543000971572" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543002059974" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -623,7 +589,7 @@
       <workItem from="1542867559779" duration="12241000" />
       <workItem from="1542922607579" duration="822000" />
       <workItem from="1542973697824" duration="5285000" />
-      <workItem from="1542990608266" duration="9245000" />
+      <workItem from="1542990608266" duration="10332000" />
     </task>
     <task id="LOCAL-00001" summary="Added pom configuration&#10;Added codestyle plugins">
       <created>1542025563555</created>
@@ -828,7 +794,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542994126818</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Updating of Readme.&#10;Refactoring of Ticket Controller.">
+      <created>1543000996505</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1543000996505</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -864,7 +837,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136558000" />
+    <option name="totallyTimeSpent" value="137645000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -925,7 +898,6 @@
     <ignored-roots>
       <path value="$USER_HOME$" />
     </ignored-roots>
-    <MESSAGE value="Adjusted File Structure&#10;Added DAO Interface" />
     <MESSAGE value="Added Domain Classes.&#10;Added Domain Class Tests." />
     <MESSAGE value="Edited web.xml as spring web mvc application.&#10;Replaced appconfig-mvc with dispatcher-servlet.xml file.&#10;Added initial mappings for Ticket Controller and Ticket Service.&#10;Added Jackson imports to pom for JSON returns.&#10;Fixed Datasource and Database configuration.&#10;Added flyway-init for migration on application startup." />
     <MESSAGE value="Fixed flyway migration on init." />
@@ -950,7 +922,8 @@
     <MESSAGE value="Adding of Ticket Controller Unit Test." />
     <MESSAGE value="Refactoring of Date Calculation Service" />
     <MESSAGE value="Adding Lot and Pricing Controller Tests." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Lot and Pricing Controller Tests." />
+    <MESSAGE value="Updating of Readme.&#10;Refactoring of Ticket Controller." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating of Readme.&#10;Refactoring of Ticket Controller." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.travis.yml">
@@ -1170,16 +1143,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/LotController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="61" column="43" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/PricingTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1278,16 +1241,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="187">
-            <caret line="97" column="19" selection-start-line="97" selection-start-column="19" selection-end-line="97" selection-end-column="19" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/data/Ticket_JDBC_DAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="961">
@@ -1310,15 +1263,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/LotController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="61" column="43" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/FutureGadgetParkingLot/rest/TicketController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
+        <state relative-caret-position="63">
           <caret line="47" column="45" lean-forward="true" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1357#1358#0" expanded="true" />
-            <element signature="e#1392#1393#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="194">
+            <caret line="225" column="23" selection-start-line="225" selection-start-column="23" selection-end-line="225" selection-end-column="23" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
