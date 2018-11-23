@@ -44,24 +44,14 @@ public class Ticket_JDBC_DAO implements DAO<Ticket> {
     }
 
     @Override
-    public void batchInsert(List<Ticket> ticketList) {
+    public void batchInsert(List<Ticket> ticketList) throws SQLException {
         String query = "INSERT INTO TICKET VALUES(?,?,?,?,?,?);";
-        this.jdbcTemplate.batchUpdate(query, new BatchPreparedStatementSetter() {
-            @Override
-            public void setValues(PreparedStatement preparedStatement, int i) throws SQLException {
-                preparedStatement.setInt(1, ticketList.get(i).getTicketId());
-                preparedStatement.setInt(2, ticketList.get(i).getLotId());
-                preparedStatement.setTimestamp(4, ticketList.get(i).getTimeIn());
-                preparedStatement.setTimestamp(4, ticketList.get(i).getTimeOut());
-                preparedStatement.setDouble(5, ticketList.get(i).getPrice());
-                preparedStatement.setBoolean(6, ticketList.get(i).getLost());
-            }
+        batchTicketSetValues(ticketList, query);
+    }
 
-            @Override
-            public int getBatchSize() {
-                return ticketList.size();
-            }
-        });
+    public void batchUpdate(List<Ticket> ticketList) throws SQLException {
+        String query = "UPDATE TICKET SET Lot_Id=?, Ticket_Date=?, Ticket_Time_In=?, Ticket_Time_Out=?, Ticket_Price=?, Ticket_Lost=? Where Ticket_Id = ?;";
+        batchTicketSetValues(ticketList, query);
     }
 
     @Override
@@ -83,7 +73,27 @@ public class Ticket_JDBC_DAO implements DAO<Ticket> {
         this.jdbcTemplate.update(query, id);
     }
 
+    private void batchTicketSetValues(List<Ticket> ticketList, String query) throws SQLException {
+        this.jdbcTemplate.batchUpdate(query, new BatchPreparedStatementSetter() {
+            @Override
+            public void setValues(PreparedStatement preparedStatement, int i) throws SQLException {
+                preparedStatement.setInt(1, ticketList.get(i).getTicketId());
+                preparedStatement.setInt(2, ticketList.get(i).getLotId());
+                preparedStatement.setTimestamp(4, ticketList.get(i).getTimeIn());
+                preparedStatement.setTimestamp(4, ticketList.get(i).getTimeOut());
+                preparedStatement.setDouble(5, ticketList.get(i).getPrice());
+                preparedStatement.setBoolean(6, ticketList.get(i).getLost());
+            }
+
+            @Override
+            public int getBatchSize() {
+                return ticketList.size();
+            }
+        });
+    }
+
     public class TicketMapper implements RowMapper<Ticket> {
+
         public Ticket mapRow(ResultSet rs, int rowNum) throws SQLException {
             return new Ticket(
                     rs.getInt("Ticket_id"),

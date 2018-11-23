@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import java.sql.SQLException;
 import java.util.List;
 
 @Service
@@ -34,18 +35,32 @@ public class TicketService {
         return (this.ticketJdbcDao.getAll());
     }
 
-    public Ticket getTicketById(int id) {
-        return (this.ticketJdbcDao.get(id));
+    public Ticket getTicketById(int id) { return (this.ticketJdbcDao.get(id)); }
+
+    public List calculateAllOutstandingTickets() throws SQLException {
+        List<Ticket> ticketList = ticketJdbcDao.getAll();
+        for (int i=0; i<ticketList.size();i++) {
+            if (ticketList.get(i).getPrice() == 0) {
+                ticketList.get(i).setPrice(ticketPriceCalculationService.calculateTicketPrice(
+                        dateCalculationService.calculateDuration(ticketList.get(i)), ticketList.get(i).getLotId(), ticketList.get(i).getLost()));
+            }
+        }
+        ticketJdbcDao.batchUpdate(ticketList);
+        return ticketList;
     }
 
-    public void createTicket(Ticket ticket) {
+    public Ticket calculateOutstandingTicket(int id) {
+        Ticket ticket = ticketJdbcDao.get(id);
         if (ticket.getPrice() == 0) {
             ticket.setPrice(ticketPriceCalculationService.calculateTicketPrice(dateCalculationService.calculateDuration(ticket), ticket.getLotId(), ticket.getLost()));
         }
-        this.ticketJdbcDao.insert(ticket);
+        ticketJdbcDao.update(ticket);
+        return ticket;
     }
 
-    public void createTickets(List<Ticket> ticketList) {this.ticketJdbcDao.batchInsert(ticketList);}
+    public void createTicket(Ticket ticket) { this.ticketJdbcDao.insert(ticket); }
+
+    public void createTickets(List<Ticket> ticketList) throws SQLException {this.ticketJdbcDao.batchInsert(ticketList);}
 
     public void updateTicket(Ticket ticket) { this.ticketJdbcDao.update(ticket); }
 

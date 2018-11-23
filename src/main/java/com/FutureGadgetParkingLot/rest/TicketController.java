@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import javax.ws.rs.*;
+import java.sql.SQLException;
 import java.util.List;
 
 @Controller
@@ -40,16 +41,24 @@ public class TicketController {
         this.ticketService.createTicket(ticket);
     }
 
-    @Path("/create/blank/json")
-    @POST
-    @Consumes("application/json")
-    public void createTicketWithoutPrice(Ticket ticket) {
+    @Path("/outstanding")
+    @GET
+    @Produces("application/json")
+    public List<Ticket> getAllOutstandingTickets() throws SQLException {
+        return ticketService.calculateAllOutstandingTickets();
+    }
+
+    @Path("/outstanding/{id}")
+    @GET
+    @Produces("application/json")
+    public Ticket getOutstandingTicket(@PathParam("id") int id) {
+        return ticketService.calculateOutstandingTicket(id);
     }
 
     @Path("/create/list/json")
     @POST
     @Consumes("application/json")
-    public void createTickets(List<Ticket> ticketList) { this.ticketService.createTickets(ticketList);}
+    public void createTickets(List<Ticket> ticketList) throws SQLException { this.ticketService.createTickets(ticketList);}
 
     @Path("/update/json")
     @PUT
